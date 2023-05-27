@@ -1,0 +1,112 @@
+@import url('/src/assests//font/font.css');
+
+.blog {
+  background: #000000;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.blog .tittle {
+  text-align: center;
+  font-family: hertica;
+  font-size: 40px;
+}
+
+.blog .tittle .color {
+  color: #c70039;
+}
+
+.blog .subheading {
+  font-family: mandala;
+  text-align: center;
+  color: aliceblue;
+  margin: -5px 0 0 0;
+}
+
+.blog .subheading .color {
+  color: #c70039;
+}
+
+.blog .data {
+  width: 100%;
+  height: 50vh;
+  background: #828282;
+  justify-content: center;
+}
+
+.blog .Typewriter {
+  width: 100%;
+  color: cadetblue;
+  font-family: mandala;
+  text-align: center;
+  font-size: 80px;
+  transition: 5s ease;
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.ourWork {
+  background: #000000;
+  height: 100vh;
+}
+
+.ourWork .data {
+  height: 100%;
+}
+
+.ourWork .data .content {
+  margin-top: 150px;
+  display: flex;
+  width: 100%;
+}
+
+.ourWork .data .content .left {
+  height: 100%;
+  margin: 0 0 0 40px;
+}
+
+.ourWork .data .content .left .ldata {
+  height: 90%;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourWork .data .content .left .ldata .tittle {
+  font-size: 30px;
+  font-family: hertica;
+  color: cyan;
+}
+
+.ourWork .data .content .left .ldata .details {
+  font-family: mandala;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.ourWork .data .content .left .ldata .view {
+  width: 200px;
+  height: 50px;
+  font-family: hertica;
+  font-size: 20px;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid cyan;
+}
+
+.ourWork .data .content .right {
+  height: 100%;
+  padding: 0 40px 0 0;
+}
+
+.ourWork .data .content .right .workImg1 {
+  height: 536px;
+}
+
+/*# sourceMappingURL=blog.css.map */

@@ -1,0 +1,228 @@
+.home {
+  background: #000000;
+  height: 95vh;
+  padding: 0;
+}
+.home .videoTag {
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  position: absolute;
+  size: 100% 90%;
+  left: 0;
+  background-repeat: no-repeat, repeat;
+  background-blend-mode: screen;
+  background-color: #ffffff;
+  filter: grayscale(90%);
+  filter: brightness(20%);
+  size: 100 100;
+  width: inherit;
+  height: inherit;
+  background-size: cover;
+}
+.home .hdata {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.home .hdata .col {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+.home .hdata .social {
+  height: 75vh;
+  width: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+.home .hdata .social a {
+  margin: 10px;
+}
+.home .hdata .social .fa-brands,
+.home .hdata .social .fa-solid {
+  font-size: 30px;
+  color: #828282;
+  margin: 15px 0;
+}
+.home .hdata .social .fa-brands:hover,
+.home .hdata .social .fa-solid:hover {
+  color: #ffffff;
+  transition: 0.1s ease-in-out;
+}
+.home .hdata .social .fa-phone {
+  rotate: 90deg;
+}
+.home .hdata .main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.home .hdata .main .name {
+  font-size: 65px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: lowercase !important;
+  font-family: hertica;
+}
+.home .hdata .main .name .hi {
+  display: flex;
+}
+.home .hdata .main .name .hi button {
+  border: none;
+  background: none;
+  color: #ffffff;
+}
+.home .hdata .main .name .hi .c:hover {
+  animation: rubberband 800ms alternate ease-out;
+  color: aquamarine;
+  cursor: pointer;
+}
+@keyframes rubberband {
+  25% {
+    transform: scaleX(1.12) scaleY(0.75);
+  }
+  50% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  75% {
+    transform: scaleX(1.09) scaleY(0.85);
+  }
+}
+.home .hdata .main .name .firstName {
+  display: flex;
+}
+.home .hdata .main .name .firstName .last button {
+  border: none;
+  background: none;
+  color: #ffffff;
+}
+.home .hdata .main .name .firstName .last .c:hover {
+  animation: rubberband 800ms alternate ease-in-out;
+  color: aquamarine;
+  cursor: pointer;
+}
+@keyframes rubberband {
+  25% {
+    transform: scaleX(1.12) scaleY(0.75);
+  }
+  50% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  75% {
+    transform: scaleX(1.09) scaleY(0.85);
+  }
+}
+.home .hdata .main .name .firstName .first button {
+  border: none;
+  background: none;
+  color: #c70039;
+}
+.home .hdata .main .name .firstName .first .c:hover {
+  animation: rubberband 800ms alternate ease-in-out;
+  color: aquamarine;
+  cursor: pointer;
+}
+@keyframes rubberband {
+  25% {
+    transform: scaleX(1.12) scaleY(0.75);
+  }
+  50% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  75% {
+    transform: scaleX(1.09) scaleY(0.85);
+  }
+}
+.home .hdata .main .meratext {
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  font-size: 40px;
+  color: teal;
+  font-family: mandala;
+}
+.home .hdata .main .meratext .Typewriter {
+  display: flex;
+  font-family: mandala;
+  text-align: center;
+  font-size: 40px;
+  color: green;
+  height: 50px;
+  justify-content: center;
+}
+.home .hdata .main .meratext .Typewriter .fText {
+  color: #ffffff;
+}
+.home .hdata .main .meratext .Typewriter .Typewriter__cursor {
+  color: green;
+}
+
+@media only screen and (min-width: 1px) and (max-width: 600px) {
+  .home {
+    height: 100vh;
+  }
+  .home .hdata {
+    height: 85vh;
+    padding: 50px;
+  }
+  .home .hdata .social {
+    height: 10vh;
+  }
+  .home .hdata .social .fa-brands {
+    font-size: 20px;
+    margin: 15px;
+  }
+  .home .hdata .main {
+    height: 45vh;
+  }
+  .home .hdata .main .name {
+    font-size: 30px;
+  }
+  .home .hdata .main .meratext .Typewriter {
+    font-size: 20px;
+  }
+  .home .hdata .s-2 {
+    height: 10vh;
+  }
+  .home .hdata .s-2 .fa-solid {
+    margin: 15px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 400px) {
+  .home .hdata {
+    padding: 50px 20px;
+  }
+}
+@media only screen and (min-width: 1px) and (max-width: 330px) {
+  .home .hdata .social .fa-brands {
+    font-size: 15px;
+    margin: 10px;
+  }
+  .home .hdata .main .name {
+    font-size: 25px;
+  }
+  .home .hdata .main .meratext .Typewriter {
+    font-size: 18px;
+  }
+  .home .hdata .s-2 .fa-solid {
+    margin: 10px;
+    font-size: 15px;
+  }
+}/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,213 @@
+@import url('/src/assests//font/font.css');
+
+//this is Contact
+.contact {
+    background: #000000;
+    // height: 100vh;
+
+    .content {
+        padding: 17px 0 0 0;
+        // padding: 150px 200px;
+        // background: #ff6347;
+        height: 100%;
+
+        .left {
+            height: 90%;
+            // width: 60%;
+
+            .content {
+                padding: 50px 0 0 100px;
+
+                .tittle {
+                    color: cyan;
+                    font-size: 60px;
+                    font-family: hertica;
+                    margin: 0 0 5px 0;
+                }
+
+                .text {
+                    color: #ffffff;
+                    font-family: mandala;
+                    font-size: 30px;
+                    line-height: 32px;
+                    margin: 0 0 25px 0;
+                    width: 93%;
+                }
+
+                input {
+                    border: none;
+                    background: #82828238;
+                    font-size: 25px;
+                    font-family: mandala;
+                    caret-color: red;
+                    padding: 0 0 0 10px;
+                    color: #ffffff;
+                }
+
+
+                input:focus {
+                    outline: none;
+                    border-bottom: 3px solid cyan;
+                    // transition-delay: 0.5s width;
+
+                }
+
+                .name {
+                    width: 270px;
+                    height: 50px;
+                }
+
+                .name:placeholder {
+                    margin: 0 0 0 20px;
+                    padding: 0 0 0 20px;
+                }
+
+                .email {
+                    width: 273.2px;
+                    margin: 0 0 0 10px;
+                    height: 50px;
+                    background: #82828238;
+                }
+
+                .subject {
+                    height: 60px;
+                    width: 86%;
+                    margin: 15px 0;
+                }
+
+                textarea {
+                    background: #82828238;
+                    border: none;
+                    width: 86%;
+                    height: 100px;
+                    min-height: 100px;
+                    max-height: 150px;
+                    font-size: 25px;
+                    font-family: mandala;
+                    caret-color: red;
+                    padding: 0 0 0 10px;
+                    color: #ffffff;
+                }
+
+                textarea:focus {
+                    outline: none;
+                    border-bottom: 3px solid cyan;
+                }
+
+                .submit {
+                    width: 250px;
+                    height: 60px;
+                    margin: 25px 0px 0 0;
+                    background-color: transparent;
+                    color: cyan;
+                    border: 1px solid cyan;
+                    font-family: mandala;
+                    font-size: 30px;
+
+                    transition: ease-out 0.8s;
+
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+
+                    // .fa-arrow-right-long {
+                    //     font-size: 25px;
+                    //     margin: 10px 0 0 10px;
+                    // }
+                }
+
+                .submit:hover {
+                    box-shadow: inset 400px 0 0 0 cyan;
+                    color: #000000;
+                    font-size: 35px;
+                }
+            }
+        }
+
+        .right {
+            // width: 40%;
+
+            iframe {
+                height: 100%;
+                padding: 50px 0;
+                // width: 100%;
+                background: #000000;
+                filter: sepia();
+                touch-action: pinch-zoom;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1px) and (max-width: 600px) {
+    .contact {
+        height: 100%;
+
+
+        .content {
+            padding: 50px 20px 0 20px;
+            display: block;
+
+            .left {
+                .content {
+                    padding: 0;
+
+                    .tittle {
+                        font-size: 35px;
+                        text-align: center;
+                    }
+
+                    .text {
+                        padding: 20px 0 0 10px;
+                        // text-align: center;
+                        margin: 0;
+                        width: 100%;
+                        font-size: 20px;
+                    }
+
+                    form {
+                        // padding: 0 0 20px 0;
+                        text-align: center;
+                        padding: 30px 30px 80px 30px;
+
+                        .name {
+                            // width: 322px;
+                            width: 100%;
+                        }
+
+                        .email {
+                            // width: 322px;
+                            width: 100%;
+                            margin: 20px 0 0 0;
+                        }
+
+                        .subject {
+                            width: 100%;
+                            margin: 20px 0 0 0;
+                        }
+
+                        .textarea {
+                            width: 100%;
+                            margin: 20px 0 0 0;
+                        }
+
+                        .submit {
+                            text-align: center;
+                            justify-content: center;
+                        }
+
+                    }
+                }
+            }
+
+            .right {
+                iframe {
+                    width: 100%;
+                    height: 600px;
+                    padding: 0;
+                }
+            }
+        }
+
+    }
+}

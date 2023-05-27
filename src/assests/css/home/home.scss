@@ -1,0 +1,366 @@
+.home {
+    background: #000000;
+    height: 95vh;
+    // padding: 80px 0 0 0;
+    padding: 0;
+
+    //this is a header css
+
+    .videoTag {
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        // height: 100vh;
+        padding: 0;
+        position: absolute;
+        size: 100% 90%;
+        left: 0;
+        background-repeat: no-repeat, repeat;
+        background-blend-mode: screen;
+        background-color: #ffffff;
+        filter: grayscale(90%);
+        filter: brightness(20%);
+        size: 100 100;
+        width: inherit;
+        height: inherit;
+        background-size: cover;
+
+    }
+
+
+
+
+    .hdata {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        .col {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            // text-align: center;
+        }
+
+
+
+        .social {
+            height: 75vh;
+            width: 10%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+
+            a {
+                margin: 10px;
+            }
+
+            .fa-brands,
+            .fa-solid {
+                font-size: 30px;
+                color: #828282;
+                margin: 15px 0;
+
+            }
+
+            .fa-brands:hover,
+            .fa-solid:hover {
+                color: #ffffff;
+                transition: 0.1s ease-in-out;
+            }
+
+            .fa-phone {
+                rotate: 90deg;
+            }
+        }
+
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            // height: 90%;
+            width: 100%;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+
+
+            .name {
+                font-size: 65px;
+                text-align: center;
+                color: #ffffff;
+                text-transform: lowercase !important;
+                font-family: hertica;
+
+
+                // font-family: 'Marcellus', serif;
+                // font-family: 'Marcellus SC',serif;
+                // font-family: 'Oswald',sans-serif;
+                // font-family: 'Raleway',serif;
+                // font-family: 'Rubik Vinyl',cursive;
+                // font-family: 'Ubuntu',sans-serif;
+                // font-family: 'Yanone Kaffeesatz', sans-serif;
+
+                .hi {
+                    display: flex;
+
+                    button {
+                        border: none;
+                        background: none;
+                        color: #ffffff;
+                        // height: 100px;
+                        // width: 50px;
+                    }
+
+                    .c:hover {
+                        animation: rubberband 800ms alternate ease-out;
+                        color: aquamarine;
+                        // padding: 0 5px;
+                        cursor: pointer;
+
+                        @keyframes rubberband {
+
+                            25% {
+                                transform: scaleX(1.12) scaleY(0.75);
+                            }
+
+                            50% {
+                                transform: scaleX(0.85) scaleY(1);
+                            }
+
+                            75% {
+                                transform: scaleX(1.09) scaleY(0.85);
+                            }
+                        }
+
+
+                    }
+                }
+
+                .firstName {
+                    display: flex;
+
+                    .last {
+                        button {
+                            border: none;
+                            background: none;
+                            color: #ffffff;
+                        }
+
+                        .c:hover {
+                            animation: rubberband 800ms alternate ease-in-out;
+                            color: aquamarine;
+                            // padding: 0 5px;
+                            cursor: pointer;
+
+                            @keyframes rubberband {
+
+                                25% {
+                                    transform: scaleX(1.12) scaleY(0.75);
+                                }
+
+                                50% {
+                                    transform: scaleX(0.85) scaleY(1);
+                                }
+
+                                75% {
+                                    transform: scaleX(1.09) scaleY(0.85);
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+                    .first {
+                        button {
+                            border: none;
+                            background: none;
+                            color: #c70039;
+                            // height: 100px;
+                            // width: 50px;
+                        }
+
+                        .c:hover {
+                            animation: rubberband 800ms alternate ease-in-out;
+                            color: aquamarine;
+                            // padding: 0 5px;
+                            cursor: pointer;
+
+                            @keyframes rubberband {
+
+                                25% {
+                                    transform: scaleX(1.12) scaleY(0.75);
+                                }
+
+                                50% {
+                                    transform: scaleX(0.85) scaleY(1);
+                                }
+
+                                75% {
+                                    transform: scaleX(1.09) scaleY(0.85);
+                                }
+                            }
+
+
+                        }
+
+                    }
+
+
+                }
+            }
+
+
+
+            .meratext {
+                height: 50px;
+                display: flex;
+                flex-direction: row;
+                // width: 100%;
+                text-align: center;
+                position: relative;
+                justify-content: center;
+                // left: 40%;
+
+                font-size: 40px;
+                color: teal;
+                font-family: mandala;
+
+                .Typewriter {
+                    display: flex;
+                    // color: #c70039;
+                    font-family: mandala;
+                    // font-family: amelinda;
+                    text-align: center;
+                    font-size: 40px;
+                    // color: teal;
+                    color: green;
+                    height: 50px;
+                    justify-content: center;
+
+                    .fText {
+                        color: #ffffff;
+
+                    }
+
+                    .Typewriter__cursor {
+                        color: green;
+                    }
+
+
+                }
+            }
+
+        }
+
+    }
+}
+
+
+// Responsive for mobile view
+@media only screen and (min-width:1px) and (max-width: 600px) {
+    .home {
+        height: 100vh;
+
+        .hdata {
+            height: 85vh;
+            padding: 50px;
+
+            .social {
+                height: 10vh;
+
+                .fa-brands {
+                    font-size: 20px;
+                    margin: 15px;
+                }
+            }
+
+            .main {
+                height: 45vh;
+
+                .name {
+                    font-size: 30px;
+                }
+
+                .meratext {
+                    .Typewriter {
+
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .s-2 {
+                // justify-content: flex-end;
+                height: 10vh;
+
+                .fa-solid {
+                    margin: 15px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+//Responsive for small mobile size
+@media only screen and (min-width:1px) and (max-width: 400px) {
+    .home {
+        .hdata {
+            // height: 75vh;
+            padding: 50px 20px;
+        }
+    }
+}
+
+@media only screen and (min-width:1px) and (max-width: 330px) {
+    .home {
+        .hdata {
+            // height: 85vh;
+            // padding: 50px;
+
+            .social {
+                // height: 10vh;
+
+                .fa-brands {
+                    font-size: 15px;
+                    margin: 10px;
+                }
+            }
+
+            .main {
+                // height: 45vh;
+
+                .name {
+                    font-size: 25px;
+                }
+
+                .meratext {
+                    .Typewriter {
+
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .s-2 {
+                // justify-content: flex-end;
+                // height: 10vh;
+
+                .fa-solid {
+                    margin: 10px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+.work {
+  width: 100%;
+  background: #000000;
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.work Header {
+  height: 100%;
+}
+.work .tittle {
+  margin-top: 0px;
+  font-family: hertica;
+  color: #828282;
+  text-align: center;
+  font-size: 40px;
+}
+.work .tittle .color {
+  color: #c70039;
+}
+.work .subHeading {
+  margin-top: -20px;
+  margin-bottom: 20px;
+  font-family: mandala;
+  color: cyan;
+  text-align: center;
+  font-size: 25px;
+}
+.work .content {
+  display: grid;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 30px;
+  grid-template-columns: auto auto auto;
+}
+.work .content .wimg {
+  width: 350px;
+  height: 250px;
+  position: relative;
+}
+.work .content .wimg img {
+  height: 100%;
+  width: 100%;
+}
+.work .content .wimg .red {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 350px;
+  height: 250px;
+  opacity: 0;
+  background: #23acc4;
+}
+.work .content .wimg .red .text {
+  position: relative;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: hertica;
+  cursor: pointer;
+}
+.work .content .wimg .red .red2 {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: flex;
+  top: 50px;
+  left: 100px;
+  background-color: #c70039;
+  justify-content: center;
+  text-align: center;
+  border-radius: 150px;
+  color: #fff;
+}
+.work .content .wimg:hover .red {
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1px) and (max-width: 426px) {
+  .work .tittle {
+    margin: 50px 0 0 0;
+    font-size: 25px;
+  }
+  .work .subHeading {
+    font-size: 15px;
+    margin: -5px 0 15px 0;
+  }
+  .work .content {
+    display: block;
+  }
+  .work .content .wimg .red {
+    width: 310px;
+    height: 210px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .work .content .wimg .red .red2 {
+    top: 15%;
+    left: 25%;
+  }
+  .work .content .wimg:nth-child(even) .red {
+    width: 310px;
+    height: 210px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+  }
+  .work .content .wimg:nth-child(even) .red .red2 {
+    top: 15%;
+    left: 25%;
+  }
+  .work .content .img1 {
+    padding: 20px;
+  }
+  .work .content .img2 {
+    padding: 0 20px;
+    height: auto;
+  }
+  .work .content .img2 img {
+    height: 210px;
+  }
+  .work .content .img3 {
+    padding: 20px;
+  }
+  .work .content .img4 {
+    padding: 0 20px;
+    height: auto;
+  }
+  .work .content .img4 img {
+    height: 210px;
+  }
+  .work .content .img5 {
+    padding: 20px;
+  }
+  .work .content .img6 {
+    padding: 0 20px 40px 20px;
+    height: auto;
+  }
+  .work .content .img6 img {
+    height: 210px;
+  }
+}
+@media screen and (min-width: 1px) and (max-width: 325px) {
+  .work .content .wimg {
+    width: 100%;
+    height: auto;
+  }
+  .work .content .wimg img {
+    height: 180px;
+  }
+  .work .content .wimg .red {
+    width: 280px;
+    height: 180px;
+  }
+  .work .content .img6 {
+    padding: 0 20px 10px 20px;
+  }
+  .work .content .wimg:nth-child(even) .red {
+    width: 280px;
+    height: 180px;
+  }
+}/*# sourceMappingURL=work.css.map */
