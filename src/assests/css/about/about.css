@@ -272,28 +272,103 @@
     height: 100%;
     margin: 0;
   }
-  .about .skills .col2 .rskill .skill {
+  .about .skills .col2 .rskill .data .skill {
     width: 60px;
     height: 60px;
   }
-  .about .skills .col2 .rskill .skill .skillImg {
+  .about .skills .col2 .rskill .data .skill .skillImg {
     width: 40px;
     height: 40px;
   }
 }
-@media only screen and (min-width: 1px) and (max-width: 325px) {
+@media only screen and (min-width: 1px) and (max-width: 400px) {
+  .skills .col2 .rskill {
+    height: auto;
+  }
   .skills .col2 .rskill .data {
-    align-items: center;
+    height: 70vh !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    align-content: center !important;
+    align-items: center !important;
   }
   .skills .col2 .rskill .data .skill {
-    margin: 7px;
-    width: 50px;
-    height: 50px;
-    padding: 10px;
+    margin: 5px !important;
+    width: 50px !important;
+    height: 50px !important;
+    padding: 0px !important;
   }
   .skills .col2 .rskill .data .skill .skillImg {
     width: 40px;
     height: 40px;
+    margin: 0px !important;
+    padding: 0 !important;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 770px) {
+  .about .tcontent .tittle {
+    font-size: 30px;
+  }
+  .about .bcontent {
+    padding: 0 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .about .bcontent .labout {
+    width: 50%;
+    padding: 0;
+  }
+  .about .bcontent .labout .intro {
+    font-size: 25px;
+  }
+  .about .bcontent .labout .dIntro {
+    font-size: 15px;
+    margin: 0;
+    padding: 0 0 25px 0;
+  }
+  .about .bcontent .labout .resumebtn {
+    width: 190px;
+    height: 5 0px;
+    font-size: 15px;
+  }
+  .about .bcontent .rabout {
+    width: 50%;
+  }
+  .about .bcontent .rabout .tagcloud {
+    display: none;
+  }
+  .about .timeline2 {
+    margin: 40px 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .about .skills {
+    height: auto;
+  }
+  .about .skills .col2 {
+    height: 400px;
+  }
+  .about .skills .col2 .lskill {
+    height: 100%;
+    margin: 0;
+  }
+  .about .skills .col2 .rskill {
+    height: 100%;
+    margin: 0;
+  }
+  .about .skills .col2 .rskill .data .skill {
+    padding: 0px;
     margin: 10px;
+    width: 100px;
+    height: 100px;
+  }
+  .about .skills .col2 .rskill .data .skill .skillImg {
+    width: 50px;
+    height: 50px;
   }
 }/*# sourceMappingURL=about.css.map */

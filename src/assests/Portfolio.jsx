@@ -5,7 +5,7 @@ import clinic from "./images/doc.png";
 
 function Portfolio() {
   return (
-    <>
+    <div className="mywork">
       <Header />
       <Container fluid className="work">
         <h3 className="tittle">
@@ -88,7 +88,7 @@ function Portfolio() {
           </Col>
         </Row>
       </Container>
-    </>
+    </div>
   );
 }
 

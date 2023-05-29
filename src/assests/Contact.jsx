@@ -16,7 +16,7 @@ function Contact() {
     return (
         <Container fluid className="contact">
             <Header />
-            <Row className="content">
+            <Row className="Ccontent">
                 <Col className="left">
                     <div className="content">
                         <h3 className="tittle">Contact Me</h3>

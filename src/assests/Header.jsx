@@ -28,9 +28,9 @@ function Header() {
           className="toggler"
           onClick={handleToggle}
         >
-          <span id="bar1" class="bar"></span>
-          <span id="bar2" class="bar"></span>
-          <span id="bar3" class="bar"></span>
+          <span id="bar1" className="bar"></span>
+          <span id="bar2" className="bar"></span>
+          <span id="bar3" className="bar"></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="myheader">
           <Nav className="navlink2">

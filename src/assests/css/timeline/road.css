@@ -400,8 +400,8 @@
     display: none;
   }
   .Tdata {
-    height: 120vh;
-    padding: 40px 20px;
+    height: 100%;
+    padding: 40px 2px;
   }
   .Tdata .timeline {
     display: flex;
@@ -409,17 +409,17 @@
     height: 100%;
   }
   .Tdata .timeline .item1 {
-    height: 100%;
+    height: 200px !important;
     display: flex;
     margin: 0;
     height: 250px;
-    padding: 30px 0 20px 0;
+    margin: 30px 0 20px 0;
   }
   .Tdata .timeline .item1 .left {
     float: left;
     left: 0;
     width: 45%;
-    height: 100%;
+    height: 100% !important;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,18 +443,20 @@
     font-size: 15px;
   }
   .Tdata .timeline .item1 .center {
+    width: auto;
     display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    height: 100% !important;
   }
   .Tdata .timeline .item1 .center .icon {
     background: blueviolet;
+    text-align: center;
     width: 50px;
     height: 50px;
     text-align: center;
     border-radius: 50%;
     z-index: 12;
+    position: relative;
+    top: 40%;
   }
   .Tdata .timeline .item1 .center .icon .hardwork {
     left: 0;
@@ -467,7 +469,7 @@
     float: right;
     width: 45%;
     display: flex;
-    height: 100%;
+    height: 100% !important;
     justify-content: flex-end;
     align-items: flex-start;
   }
@@ -505,8 +507,6 @@
   .Tdata .timeline .item2 .center {
     display: flex;
     height: 100%;
-    justify-content: center;
-    align-items: center;
   }
   .Tdata .timeline .item2 .center .icon {
     background: blueviolet;
@@ -515,6 +515,8 @@
     text-align: center;
     border-radius: 50%;
     z-index: 12;
+    position: relative;
+    top: 40%;
   }
   .Tdata .timeline .item2 .center .icon .hardwork {
     left: 0;
@@ -556,7 +558,7 @@
     display: flex;
     margin: 0;
     height: 250px;
-    padding: 20px 0 50px 0;
+    margin: 20px 0 50px 0;
   }
   .Tdata .timeline .item3 .left {
     width: 45%;
@@ -583,7 +585,7 @@
   .Tdata .timeline .item3 .center {
     display: flex;
     justify-content: center;
-    align-items: center;
+    height: 100%;
   }
   .Tdata .timeline .item3 .center .icon {
     width: 50px;
@@ -591,6 +593,8 @@
     background: blueviolet;
     border-radius: 50%;
     z-index: 124;
+    position: relative;
+    top: 40%;
   }
   .Tdata .timeline .item3 .center .icon .hardwork {
     left: 0;

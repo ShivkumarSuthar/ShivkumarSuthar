@@ -1,24 +1,25 @@
 @import url("/src/assests//font/font.css");
 .contact {
   background: #000000;
+  height: 95vh;
 }
-.contact .content {
+.contact .Ccontent {
   padding: 17px 0 0 0;
-  height: 100%;
-}
-.contact .content .left {
   height: 90%;
 }
-.contact .content .left .content {
+.contact .Ccontent .left {
+  height: 90%;
+}
+.contact .Ccontent .left .content {
   padding: 50px 0 0 100px;
 }
-.contact .content .left .content .tittle {
+.contact .Ccontent .left .content .tittle {
   color: cyan;
   font-size: 60px;
   font-family: hertica;
   margin: 0 0 5px 0;
 }
-.contact .content .left .content .text {
+.contact .Ccontent .left .content .text {
   color: #ffffff;
   font-family: mandala;
   font-size: 30px;
@@ -26,7 +27,7 @@
   margin: 0 0 25px 0;
   width: 93%;
 }
-.contact .content .left .content input {
+.contact .Ccontent .left .content input {
   border: none;
   background: rgba(130, 130, 130, 0.2196078431);
   font-size: 25px;
@@ -35,30 +36,30 @@
   padding: 0 0 0 10px;
   color: #ffffff;
 }
-.contact .content .left .content input:focus {
+.contact .Ccontent .left .content input:focus {
   outline: none;
   border-bottom: 3px solid cyan;
 }
-.contact .content .left .content .name {
+.contact .Ccontent .left .content .name {
   width: 270px;
   height: 50px;
 }
-.contact .content .left .content .name:placeholder {
+.contact .Ccontent .left .content .name:placeholder {
   margin: 0 0 0 20px;
   padding: 0 0 0 20px;
 }
-.contact .content .left .content .email {
+.contact .Ccontent .left .content .email {
   width: 273.2px;
   margin: 0 0 0 10px;
   height: 50px;
   background: rgba(130, 130, 130, 0.2196078431);
 }
-.contact .content .left .content .subject {
+.contact .Ccontent .left .content .subject {
   height: 60px;
   width: 86%;
   margin: 15px 0;
 }
-.contact .content .left .content textarea {
+.contact .Ccontent .left .content textarea {
   background: rgba(130, 130, 130, 0.2196078431);
   border: none;
   width: 86%;
@@ -71,11 +72,11 @@
   padding: 0 0 0 10px;
   color: #ffffff;
 }
-.contact .content .left .content textarea:focus {
+.contact .Ccontent .left .content textarea:focus {
   outline: none;
   border-bottom: 3px solid cyan;
 }
-.contact .content .left .content .submit {
+.contact .Ccontent .left .content .submit {
   width: 250px;
   height: 60px;
   margin: 25px 0px 0 0;
@@ -86,12 +87,12 @@
   font-size: 30px;
   transition: ease-out 0.8s;
 }
-.contact .content .left .content .submit:hover {
+.contact .Ccontent .left .content .submit:hover {
   box-shadow: inset 400px 0 0 0 cyan;
   color: #000000;
   font-size: 35px;
 }
-.contact .content .right iframe {
+.contact .Ccontent .right iframe {
   height: 100%;
   padding: 50px 0;
   background: #000000;
@@ -103,49 +104,108 @@
   .contact {
     height: 100%;
   }
-  .contact .content {
+  .contact .Ccontent {
     padding: 50px 20px 0 20px;
     display: block;
   }
-  .contact .content .left .content {
+  .contact .Ccontent .left .content {
     padding: 0;
   }
-  .contact .content .left .content .tittle {
+  .contact .Ccontent .left .content .tittle {
     font-size: 35px;
     text-align: center;
   }
-  .contact .content .left .content .text {
+  .contact .Ccontent .left .content .text {
     padding: 20px 0 0 10px;
     margin: 0;
     width: 100%;
     font-size: 20px;
   }
-  .contact .content .left .content form {
+  .contact .Ccontent .left .content form {
     text-align: center;
     padding: 30px 30px 80px 30px;
   }
-  .contact .content .left .content form .name {
+  .contact .Ccontent .left .content form .name {
     width: 100%;
   }
-  .contact .content .left .content form .email {
-    width: 100%;
-    margin: 20px 0 0 0;
-  }
-  .contact .content .left .content form .subject {
+  .contact .Ccontent .left .content form .email {
     width: 100%;
     margin: 20px 0 0 0;
   }
-  .contact .content .left .content form .textarea {
+  .contact .Ccontent .left .content form .subject {
     width: 100%;
     margin: 20px 0 0 0;
   }
-  .contact .content .left .content form .submit {
+  .contact .Ccontent .left .content form .textarea {
+    width: 100%;
+    margin: 20px 0 0 0;
+  }
+  .contact .Ccontent .left .content form .submit {
     text-align: center;
     justify-content: center;
   }
-  .contact .content .right iframe {
+  .contact .Ccontent .right iframe {
     width: 100%;
     height: 600px;
     padding: 0;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 770px) {
+  .contact {
+    height: 100%;
+  }
+  .contact .Ccontent {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 50px;
+  }
+  .contact .Ccontent .left {
+    width: 70%;
+  }
+  .contact .Ccontent .left .content {
+    padding: 0;
+  }
+  .contact .Ccontent .left .content .tittle {
+    font-size: 25px;
+  }
+  .contact .Ccontent .left .content .text {
+    font-size: 15px;
+    line-height: normal;
+  }
+  .contact .Ccontent .left .content form input {
+    font-size: 15px;
+  }
+  .contact .Ccontent .left .content form .email {
+    margin: 0;
+    width: 80%;
+    height: 50px;
+  }
+  .contact .Ccontent .left .content form .name {
+    width: 80%;
+    height: 50px;
+    margin: 0 0 10px 0;
+  }
+  .contact .Ccontent .left .content form .subject {
+    width: 80%;
+    height: 50px;
+  }
+  .contact .Ccontent .left .content form .textarea {
+    width: 80%;
+    font-size: 15px;
+  }
+  .contact .Ccontent .left .content form .submit {
+    margin: 10px 0 0 0;
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+  }
+  .contact .Ccontent .right {
+    height: 100%;
+    width: 400px;
+  }
+  .contact .Ccontent .right iframe {
+    width: 300px;
+    height: 100%;
   }
 }/*# sourceMappingURL=contact.css.map */

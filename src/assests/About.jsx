@@ -1,4 +1,4 @@
-// import React, { useEffect } from "react";
+
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "./Header";
 import TextSphere from "./TextSphere";
@@ -13,7 +13,6 @@ import github from "../assests/images/pngwing.com.png";
 import git from "../assests/images/pngwing.com (1).png";
 import vue from "../assests/images/vue-js-icon.png";
 import resume from "./resume.pdf";
-
 import TimeLine from "./TimeLine";
 
 function About() {
@@ -55,7 +54,7 @@ function About() {
       <Row className="timeline2">
         <h3 className="tittle">Milestones and Achievements</h3>
         <Col className="data">
-          <TimeLine />
+          {/* <TimeLine /> */}
         </Col>
       </Row>
       <Row className="skills">

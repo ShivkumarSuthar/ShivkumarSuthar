@@ -1,12 +1,9 @@
-// import React, { useState } from 'react'
+
 import { Col, Container, Row } from "react-bootstrap";
 import Header from "./Header";
 import Typewriter from "typewriter-effect";
 import video from "../assests/images/pexels-pressmaster-3141208-3840x2160-25fps.mp4";
 import Footer from "./Footer";
-
-// import video from '../assests/images/Untitled.mp4'
-// import video from '../assests/images/Untitled video - Made with Clipchamp.mp4'
 
 function Home() {
   const options = {
@@ -27,8 +24,8 @@ function Home() {
       <section className="home">
         <Container fluid>
           {/* <video className="videoTag" autoPlay loop muted>
-          <source src={video} />
-        </video> */}
+            <source src={video} />
+          </video> */}
           <Header />
 
           <Row className="hdata">

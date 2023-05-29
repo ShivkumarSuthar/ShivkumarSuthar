@@ -268,17 +268,23 @@
 
 // Responsive for mobile view
 @media only screen and (min-width:1px) and (max-width: 600px) {
+
     .home {
         height: 100vh;
 
         .hdata {
+            display: block;
             height: 85vh;
             padding: 50px;
 
             .social {
-                height: 10vh;
+                height: 50px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
 
                 .fa-brands {
+
                     font-size: 20px;
                     margin: 15px;
                 }
@@ -289,6 +295,10 @@
 
                 .name {
                     font-size: 30px;
+
+                    .firstName {
+                        font-size: 25px;
+                    }
                 }
 
                 .meratext {
@@ -301,10 +311,10 @@
 
             .s-2 {
                 // justify-content: flex-end;
-                height: 10vh;
+
 
                 .fa-solid {
-                    margin: 15px;
+
                     font-size: 20px;
                 }
             }
@@ -342,6 +352,8 @@
 
                 .name {
                     font-size: 25px;
+
+
                 }
 
                 .meratext {
@@ -359,6 +371,40 @@
                 .fa-solid {
                     margin: 10px;
                     font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:770px) {
+    .hdata {
+        .social {
+            .fa-brands {
+
+                font-size: 25px;
+            }
+        }
+    }
+
+    .main {
+        .name {
+
+            .hi {
+
+                font-size: 50px;
+            }
+
+            .firstName {
+                font-size: 40px;
+            }
+        }
+
+        .meratext {
+            .Typewriter {
+                span {
+
+                    font-size: 30px;
                 }
             }
         }

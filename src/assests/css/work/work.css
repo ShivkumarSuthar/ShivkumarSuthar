@@ -168,4 +168,34 @@
     width: 280px;
     height: 180px;
   }
+}
+@media screen and (min-width: 600px) and (max-width: 770px) {
+  .mywork {
+    height: 94.8vh;
+    background: #000000;
+  }
+  .mywork .work {
+    padding: 80px 0 0 0;
+  }
+  .mywork .work .tittle {
+    font-size: 30px;
+  }
+  .mywork .work .subHeading {
+    font-size: 18px;
+  }
+  .mywork .work .content .wimg {
+    width: 200px;
+    height: 150px;
+  }
+  .mywork .work .content .wimg .red {
+    width: 200px;
+    height: 150px;
+  }
+  .mywork .work .content .wimg .red .red2 {
+    width: 80px;
+    height: 80px;
+    font-size: 10px;
+    left: 30%;
+    top: 25%;
+  }
 }/*# sourceMappingURL=work.css.map */
