@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/*.{js, jsx,ts,tsx}",
-    "./src/**/*.{js,jsx,ts,tsx}"
+    './src/*.jsx',
+    './src/**/*.jsx',
+    './index.html'
 ],
 theme: {
   extend: {
@@ -12,7 +13,12 @@ theme: {
       livia_medium:'livia_medium',
       lemon_milk_B:'lemon_milk_B',
       lemon_milk_m:'lemon_milk_m',
-      
+      calluna:"calluna",
+      turis:"turis",
+      turis_B:"turis_B",
+      Praktika:"Praktika",
+      MATCHOUT:"MATCHOUT",
+      Adequate:"Adequate"
     },
     colors:{
       crystal:'#EEF5FF',

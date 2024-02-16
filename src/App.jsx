@@ -1,9 +1,11 @@
 import React from 'react'
-import "./index.css"
-
+import Hero from './components/Hero'
+import "./app.css"
 function App() {
   return (
-    <div className="w-full h-screen bg-black text-white">App</div>
+    <div className="app text-white pt-10 pl-10 pr-10">
+      <Hero/> 
+    </div>
   )
 }
 

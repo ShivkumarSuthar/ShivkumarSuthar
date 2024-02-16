@@ -1,42 +1,80 @@
-.App {
-  text-align: center;
+@import url("./style.css");
+/* font */
+@font-face {
+  font-family:livia_medium ;
+  src: url("./components/assets/font/livia_medium/Livia\ Medium.ttf");
+}
+@font-face {
+  font-family:lemon_milk_B ;
+  src: url("./components/assets/font/lemon_milk/LEMONMILK-Bold.otf");
+}
+@font-face {
+  font-family:lemon_milk_m ;
+  src: url("./components/assets/font/lemon_milk/LEMONMILK-Medium.otf");
+}
+@font-face {
+  font-family:wes ;
+  src: url("./components/assets/font/Wes/Wes\ Webfont.ttf");
+}
+@font-face {
+  font-family:myron ;
+  src: url("./components/assets/font/myron/Myron-Regular.otf");
+}
+@font-face {
+  font-family:calluna ;
+  src: url("./components/assets/font/calluna/calluna-regular.otf");
+}
+@font-face {
+  font-family:MATCHOUT ;
+  src: url("./components/assets/font/light/MATCHOUT-LIGHT.otf");
+}
+@font-face {
+  font-family:Praktika ;
+  src: url("./components/assets/font/light/Praktika-Light.otf");
+}
+@font-face {
+  font-family:turis_B ;
+  src: url("./components/assets/font/light/Turis-ExtraBold.otf");
+}
+@font-face {
+  font-family:turis ;
+  src: url("./components/assets/font/light/Turis-Light.otf");
+}
+@font-face {
+  font-family:Adequate ;
+  src: url("./components/assets/font/light/Adequate-ExtraLight.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* custom css */
+.app{
+  background-image: url("./components/assets/images/texture.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100svh;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.scroll{
+  writing-mode: vertical-rl;
+}
+.scroll-icon{
+ animation: bar ease-in-out 5s linear infinite;
+}
+@keyframes bar {
+  0% {
+    /* Initial state of the animation */
+    /* transform: scaleX(1); */
+    padding-bottom:0px ;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  50% {
+    /* Midpoint of the animation */
+    padding-bottom: 15px;
+    /* transform: scaleX(1) */
   }
-  to {
-    transform: rotate(360deg);
+  70% {
+    /* Final state of the animation */
+    padding-bottom: 0px;
   }
-}
-
-button {
-  font-size: calc(10px + 2vmin);
+  100%{
+    /* transform: scale(1); */
+    padding-bottom: 0;
+  }
 }
