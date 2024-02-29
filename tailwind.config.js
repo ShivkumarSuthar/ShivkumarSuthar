@@ -18,7 +18,8 @@ theme: {
       turis_B:"turis_B",
       Praktika:"Praktika",
       MATCHOUT:"MATCHOUT",
-      Adequate:"Adequate"
+      Adequate:"Adequate",
+      ITCAvantGardeStd:"ITCAvantGardeStd]"
     },
     colors:{
       crystal:'#EEF5FF',

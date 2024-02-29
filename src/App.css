@@ -1,80 +1,54 @@
 @import url("./style.css");
+@import url("./scrollBar.css");
 /* font */
 @font-face {
   font-family:livia_medium ;
-  src: url("./components/assets/font/livia_medium/Livia\ Medium.ttf");
+  src: url("./assets/font/livia_medium/Livia\ Medium.ttf");
 }
 @font-face {
   font-family:lemon_milk_B ;
-  src: url("./components/assets/font/lemon_milk/LEMONMILK-Bold.otf");
+  src: url("./assets/font/lemon_milk/LEMONMILK-Bold.otf");
 }
 @font-face {
   font-family:lemon_milk_m ;
-  src: url("./components/assets/font/lemon_milk/LEMONMILK-Medium.otf");
+  src: url("./assets/font/lemon_milk/LEMONMILK-Medium.otf");
 }
 @font-face {
   font-family:wes ;
-  src: url("./components/assets/font/Wes/Wes\ Webfont.ttf");
+  src: url("./assets/font/Wes/Wes\ Webfont.ttf");
 }
 @font-face {
   font-family:myron ;
-  src: url("./components/assets/font/myron/Myron-Regular.otf");
+  src: url("./assets/font/myron/Myron-Regular.otf");
 }
 @font-face {
   font-family:calluna ;
-  src: url("./components/assets/font/calluna/calluna-regular.otf");
+  src: url("./assets/font/calluna/calluna-regular.otf");
 }
 @font-face {
   font-family:MATCHOUT ;
-  src: url("./components/assets/font/light/MATCHOUT-LIGHT.otf");
+  src: url("./assets/font/light/MATCHOUT-LIGHT.otf");
 }
 @font-face {
   font-family:Praktika ;
-  src: url("./components/assets/font/light/Praktika-Light.otf");
+  src: url("./assets/font/light/Praktika-Light.otf");
 }
 @font-face {
   font-family:turis_B ;
-  src: url("./components/assets/font/light/Turis-ExtraBold.otf");
+  src: url("./assets/font/light/Turis-ExtraBold.otf");
 }
 @font-face {
   font-family:turis ;
-  src: url("./components/assets/font/light/Turis-Light.otf");
+  src: url("./assets/font/light/Turis-Light.otf");
 }
 @font-face {
   font-family:Adequate ;
-  src: url("./components/assets/font/light/Adequate-ExtraLight.ttf");
+  src: url("./assets/font/light/Adequate-ExtraLight.ttf");
+}@font-face {
+  font-family:ITCAvantGardeStd-BoldObl ;
+  src: url("./assets/font/avant-garde/ITCAvantGardeStd-BoldCnObl.otf");
 }
 
-/* custom css */
-.app{
-  background-image: url("./components/assets/images/texture.jpg");
-  background-position: center;
-  background-size: cover;
-  min-height: 100svh;
-}
-.scroll{
-  writing-mode: vertical-rl;
-}
-.scroll-icon{
- animation: bar ease-in-out 5s linear infinite;
-}
-@keyframes bar {
-  0% {
-    /* Initial state of the animation */
-    /* transform: scaleX(1); */
-    padding-bottom:0px ;
-  }
-  50% {
-    /* Midpoint of the animation */
-    padding-bottom: 15px;
-    /* transform: scaleX(1) */
-  }
-  70% {
-    /* Final state of the animation */
-    padding-bottom: 0px;
-  }
-  100%{
-    /* transform: scale(1); */
-    padding-bottom: 0;
-  }
+*{
+  overflow: hidden;
 }
