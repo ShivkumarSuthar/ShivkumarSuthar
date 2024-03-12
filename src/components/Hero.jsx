@@ -5,17 +5,16 @@ import HeroText from "./HeroText";
 function Hero() {
   return (
     <>
-      <div className="absolute">
-       <Video/>
+   
+
+      <div className="absolute w-screen h-screen">
+        <Video />
       </div>
-      
-   <section className='w-100 h-screen relative flex justify-center '>
-    <div className=" w-1/5 bg-white">d</div>
-    <div className=" w-4/5">
-<HeroText/>
-    </div>
-    <div className="w-1/5 bg-teal-100">df</div>
-   </section>
+
+      <section className="w-screen h-screen relative flex justify-center ">
+       
+      </section>
+  
     </>
   );
 }

@@ -48,7 +48,13 @@
   font-family:ITCAvantGardeStd-BoldObl ;
   src: url("./assets/font/avant-garde/ITCAvantGardeStd-BoldCnObl.otf");
 }
-
-*{
-  overflow: hidden;
+@font-face {
+  font-family:athena ;
+  src: url("./assets/font/athena/Athena-Regular\ \(PERSONAL\ USE\ ONLY\).ttf");
+}@font-face {
+  font-family:artisual_deco ;
+  src: url("./assets/font/athena/Crashnumberingserif-KVjW.ttf");
 }
+
+
+

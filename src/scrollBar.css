@@ -1,6 +1,6 @@
 ::-webkit-scrollbar {
     width: 1px;
-    height: 50px;
+    /* height: 50px; */
 }
 
 /* Track (the area behind the scrollbar) */
@@ -10,10 +10,14 @@
 
 /* Handle (the draggable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
-    background: Black; /* Dark grey */
+    background:orangered; /* Dark grey */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Black */
+}
+body{
+    overflow-x: hidden;
+
 }
