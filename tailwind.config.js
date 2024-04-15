@@ -19,7 +19,9 @@ theme: {
       Praktika:"Praktika",
       MATCHOUT:"MATCHOUT",
       Adequate:"Adequate",
-      ITCAvantGardeStd:"ITCAvantGardeStd]"
+      ITCAvantGardeStd:"ITCAvantGardeStd]",
+      hertical:"hertical]",
+      mandala:"mandala"
     },
     colors:{
       crystal:'#EEF5FF',

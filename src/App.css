@@ -55,6 +55,27 @@
   font-family:artisual_deco ;
   src: url("./assets/font/athena/Crashnumberingserif-KVjW.ttf");
 }
+@font-face {
+  font-family: hertical;
+  src: url(".//assets//font/hertical/Hertical\ Sans.ttf");
+}
+@font-face {
+  font-family: mandala;
+  src: url(".//assets//font/hertical/Mandala\ In\ Autumn.otf");
+}
 
 
+.experience{
+  background: url("./assets/images/work-1600.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+.moto {
+  background: url("./assets/images/banner-bottom-1600.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 
+}

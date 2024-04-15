@@ -9,7 +9,7 @@ function TimelineItem({ item, index }) {
   
   if (index % 2 === 1) {
     return (
-      <section className="w-100 h-screen flex flex-row bg-black pt-[5%]">
+      <section className="w-100 h-screen  flex flex-row bg-black pt-[5%]">
         <div className="w-[45%]  flex">
           <div className="w-[31%]">
             <span className=" text-[800px] text-yellow-700 font-thin font-turis_B leading-[80%] absolute pl-[15%] pt-[2%]">
@@ -172,7 +172,7 @@ function Timeline() {
   ];
 
   return (
-    <section className="w-100 bg-black h-screen">
+    <section className="w-100 bg-black h-full min-h-screen pb-[15%]">
       {data.map((item, index) => (
         <TimelineItem key={index} item={item} index={index} />
       ))}

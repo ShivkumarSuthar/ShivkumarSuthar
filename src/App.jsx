@@ -3,6 +3,9 @@ import Hero from './components/Hero'
 import TimeLine from './components/TimeLine'
 import About from './components/About'
 import WhatIDo from './components/WhatIDo'
+import Experience from './components/Experience'
+import ContactUs from './components/ContactUs'
+import Moto from './components/Moto'
 
 function App() {
   return (
@@ -10,7 +13,10 @@ function App() {
           <Hero />
           <About/>
           <WhatIDo/>
+          <Experience/>
           <TimeLine/>
+          <Moto/>
+          <ContactUs/>
     </div>
   )
 }
