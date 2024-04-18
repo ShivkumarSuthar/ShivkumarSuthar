@@ -63,7 +63,7 @@
   font-family: mandala;
   src: url(".//assets//font/hertical/Mandala\ In\ Autumn.otf");
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
 .experience{
   background: url("./assets/images/work-1600.jpg");

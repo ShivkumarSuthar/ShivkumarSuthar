@@ -21,7 +21,8 @@ theme: {
       Adequate:"Adequate",
       ITCAvantGardeStd:"ITCAvantGardeStd]",
       hertical:"hertical]",
-      mandala:"mandala"
+      mandala:"mandala",
+      Marcellus:"Marcellus"
     },
     colors:{
       crystal:'#EEF5FF',
