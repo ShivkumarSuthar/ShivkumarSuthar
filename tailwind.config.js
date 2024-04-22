@@ -7,20 +7,14 @@ module.exports = {
 ],
 theme: {
   extend: {
+    
     fontFamily:{
-      myron:"myron",
-      wes:"wes",
-      livia_medium:'livia_medium',
-      lemon_milk_B:'lemon_milk_B',
-      lemon_milk_m:'lemon_milk_m',
-      calluna:"calluna",
-      turis:"turis",
-      turis_B:"turis_B",
-      Praktika:"Praktika",
-      MATCHOUT:"MATCHOUT",
-      Adequate:"Adequate",
-      ITCAvantGardeStd:"ITCAvantGardeStd]",
-      hertical:"hertical]",
+     
+      ganeta2:"ganeta2",
+      frosty:"frosty",
+      avant:"avant",
+      Ganeta:"Ganeta",
+      hertical:"hertical",
       mandala:"mandala",
       Marcellus:"Marcellus"
     },

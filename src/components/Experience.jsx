@@ -4,21 +4,21 @@ const history = [
   {
     LastDay: "Present",
     organizationName: "Ram's Cretive Technology Pvt. Ltd.",
-    profile:"React Developer",
+    profile: "React Developer",
     location: "jaipur",
     joinDate: "Jan 2024",
   },
   {
     LastDay: "2024",
     organizationName: "Viseven Pvt. Ltd",
-    profile:"Frontend Developer",
+    profile: "Frontend Developer",
     location: "jaipur",
     joinDate: "August 2022",
   },
   {
     LastDay: "2022",
     organizationName: "Mumbai University",
-    profile:"Bachelor of Science in Information Technology",
+    profile: "Bachelor of Science in Information Technology",
     location: "Mumbai Maharashtra",
     joinDate: "july 2019",
   },
@@ -27,20 +27,20 @@ function Experience() {
   return (
     <>
       <section className="bg-black h-screen text-white experience">
-        <div className="pl-[18%] pt-[8%] h-full">
-          <h1 className=" font-lemon_milk_m uppercase text-[15px] tracking-wider">
+        <div className="px-[15%] flex flex-col justify-center  h-full relative">
+          <h1 className=" font-hertical uppercase text-[15px] tracking-[10px]">
             experience
           </h1>
 
           <div>
-            <p className="text-[70px] font-black font-wes leading-[120%] pt-5">
+            <p className="text-[70px] font-black font-ganeta2  leading-[120%] pt-5 capitalize">
               Over <span className="text-red-500">two Years </span> of
               experience in intractive design and working with some of the most
               talented people in the Industry.
             </p>
           </div>
-          <div className="pt-[13%]">
-            <h1 className=" font-lemon_milk_m uppercase text-[15px] tracking-wider">
+          <div className="absolute bottom-5">
+            <h1 className="font-hertical uppercase text-[20px] tracking-wider">
               History
             </h1>
           </div>
@@ -49,23 +49,23 @@ function Experience() {
 
       <section className="h-screen bg-black text-white">
         <div className="h-full">
-            {history.map((item,index)=>(
+          {history.map((item, index) => (
 
-                <div className="flex border-y-[1px] border-gray-500 pl-[18%] py-5 w-full" key={index}>
-            <div className="w-[25%]">
-              <span className=" font-ITCAvantGardeStd font-bold text-[45px]">
-              {item.LastDay}
-              </span>
+            <div className="flex border-b-[1px] border-red-900/50 px-[15%] py-8 w-full" key={index}>
+              <div className="w-[20%] pt-5">
+                <span className=" font-hertical text-[25px]">
+                  {item.LastDay}
+                </span>
+              </div>
+              <div className="flex flex-col items-start">
+                <span className=" font-ganeta2  font-bold text-[40px]">
+                  {item.profile}
+                </span>
+                <span className=" font-Marcellus text-[25px]">{item.organizationName}</span>
+                <span className=" font-Marcellus capitalize text-[15px]">{item.location}</span>
+              </div>
             </div>
-            <div className="flex flex-col items-start">
-              <span className=" font-ITCAvantGardeStd font-bold text-[35px]">
-                {item.profile}
-              </span>
-              <span>{item.organizationName}</span>
-              <span>{item.location}</span>
-            </div>
-          </div>
-        ))}
+          ))}
         </div>
       </section>
     </>

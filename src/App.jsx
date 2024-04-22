@@ -15,7 +15,7 @@ function App() {
           <WhatIDo/>
           <Experience/>
           <TimeLine/>
-          <Moto/>
+        
           <ContactUs/>
     </div>
   )

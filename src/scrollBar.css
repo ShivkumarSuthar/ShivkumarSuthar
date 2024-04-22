@@ -5,7 +5,7 @@
 
 /* Track (the area behind the scrollbar) */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Light grey */
+    background: black; /* Light grey */
 }
 
 /* Handle (the draggable part of the scrollbar) */
@@ -13,10 +13,7 @@
     background:orangered; /* Dark grey */
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #555; /* Black */
-}
+
 body{
     overflow-x: hidden;
 

@@ -1,63 +1,27 @@
 @import url("./style.css");
 @import url("./scrollBar.css");
 /* font */
+
 @font-face {
-  font-family:livia_medium ;
-  src: url("./assets/font/livia_medium/Livia\ Medium.ttf");
+  font-family: ganeta;
+  src: url("./assets//font/Ganeta/Ganeta.otf");
 }
 @font-face {
-  font-family:lemon_milk_B ;
-  src: url("./assets/font/lemon_milk/LEMONMILK-Bold.otf");
+  font-family: ganeta2;
+  src: url("./assets//font/Ganeta/Ganeta.ttf");
 }
 @font-face {
-  font-family:lemon_milk_m ;
-  src: url("./assets/font/lemon_milk/LEMONMILK-Medium.otf");
+  font-family: frosty;
+  src: url("./assets//font/frosty/Frosty-Regular.ttf");
 }
 @font-face {
-  font-family:wes ;
-  src: url("./assets/font/Wes/Wes\ Webfont.ttf");
+  font-family: avant;
+  src: url("./assets/font/avant-garde/Avantgarde-Bold.otf");
 }
-@font-face {
-  font-family:myron ;
-  src: url("./assets/font/myron/Myron-Regular.otf");
-}
-@font-face {
-  font-family:calluna ;
-  src: url("./assets/font/calluna/calluna-regular.otf");
-}
-@font-face {
-  font-family:MATCHOUT ;
-  src: url("./assets/font/light/MATCHOUT-LIGHT.otf");
-}
-@font-face {
-  font-family:Praktika ;
-  src: url("./assets/font/light/Praktika-Light.otf");
-}
-@font-face {
-  font-family:turis_B ;
-  src: url("./assets/font/light/Turis-ExtraBold.otf");
-}
-@font-face {
-  font-family:turis ;
-  src: url("./assets/font/light/Turis-Light.otf");
-}
-@font-face {
-  font-family:Adequate ;
-  src: url("./assets/font/light/Adequate-ExtraLight.ttf");
-}@font-face {
-  font-family:ITCAvantGardeStd-BoldObl ;
-  src: url("./assets/font/avant-garde/ITCAvantGardeStd-BoldCnObl.otf");
-}
-@font-face {
-  font-family:athena ;
-  src: url("./assets/font/athena/Athena-Regular\ \(PERSONAL\ USE\ ONLY\).ttf");
-}@font-face {
-  font-family:artisual_deco ;
-  src: url("./assets/font/athena/Crashnumberingserif-KVjW.ttf");
-}
+
 @font-face {
   font-family: hertical;
-  src: url(".//assets//font/hertical/Hertical\ Sans.ttf");
+  src: url(".//assets//font/hertical/Hertical\ Sans.otf");
 }
 @font-face {
   font-family: mandala;
