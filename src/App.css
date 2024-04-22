@@ -6,14 +6,17 @@
   font-family: ganeta;
   src: url("./assets//font/Ganeta/Ganeta.otf");
 }
+
 @font-face {
   font-family: ganeta2;
   src: url("./assets//font/Ganeta/Ganeta.ttf");
 }
+
 @font-face {
   font-family: frosty;
   src: url("./assets//font/frosty/Frosty-Regular.ttf");
 }
+
 @font-face {
   font-family: avant;
   src: url("./assets/font/avant-garde/Avantgarde-Bold.otf");
@@ -23,23 +26,65 @@
   font-family: hertical;
   src: url(".//assets//font/hertical/Hertical\ Sans.otf");
 }
+
 @font-face {
   font-family: mandala;
-  src: url(".//assets//font/hertical/Mandala\ In\ Autumn.otf");
+  src: url(".//assets//font/hertical/Mandala\ Handmade.2a1dd753ee978da87508.otf");
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
-.experience{
+.experience {
   background: url("./assets/images/work-1600.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
-  
+
 }
+
 .moto {
   background: url("./assets/images/banner-bottom-1600.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 
+}
+
+.soundText {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+}
+
+.soundBtn {
+  position: absolute;
+  width: 28px;
+  height: 65px;
+  background: white;
+  border-radius: 100vmax;
+  z-index: 0;
+  /* border: 1px solid rgba(255, 0, 0, 0.164); */
+
+}
+
+.dot {
+  z-index: 100;
+  top: 5px;
+  right: calc();
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background: rgba(126, 8, 8, 0.856);
+}
+
+.dot::before {
+  position: relative;
+  bottom: -28px;
+  transform: rotate(-90deg);
+  content: "Off";
+  color: black;
+  font-size: 13px;
 }
