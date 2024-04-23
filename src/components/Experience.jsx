@@ -33,7 +33,7 @@ function Experience() {
           </h1>
 
           <div>
-            <p className="text-[70px] font-black font-ganeta2  leading-[120%] pt-5 capitalize">
+            <p className="text-[65px] font-black font-ganeta2  leading-[120%] pt-5 capitalize">
               Over <span className="text-red-500">two Years </span> of
               experience in intractive design and working with some of the most
               talented people in the Industry.

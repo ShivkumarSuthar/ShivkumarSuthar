@@ -7,7 +7,7 @@ function WhatIDo() {
         <h1 className=" font-hertical text-[15px]">
           What I do
         </h1>
-        <div className="font-hertical text-[150px] leading-[95%]">
+        <div className="font-hertical text-[120px] leading-[95%]">
           <div className="flex items-center ">
             <p className=" tracking-tighter uppercase">
               3D

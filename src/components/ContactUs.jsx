@@ -1,25 +1,37 @@
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 function ContactUs() {
   const [name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [pInfo, setpInfo] = useState("");
 
-  const handleFormSubmit = (e) => {
+  const form = useRef();
+  const validateEmail = (email) => {
+    // Email validation regex
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const sendEmail = (e) => {
     e.preventDefault();
+    if (!validateEmail(Email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
     emailjs
-      .sendForm("service_tvvj2qk", "template_dsunklw", e.target={Email})
+      .sendForm("service_tvvj2qk", "template_rghfcrg", form.current, {
+        publicKey: "oCq8YzWrgo23dHtJq",
+      })
       .then(
-        (result) => {
-          console.log("Email sent successfully:", result.text);
-          // Add your success message or redirect here
+        () => {
+          console.log("SUCCESS!");
         },
         (error) => {
-          console.error("Error sending email:", error.text);
-          // Add error handling here
+          console.log("FAILED...", error);
         }
       );
   };
+
   return (
     <section className="h-screen bg-black flex justify-center items-center">
       <div className="w-[80%]">
@@ -48,30 +60,33 @@ function ContactUs() {
               </p>
             </div>
             <div>
-              <form onSubmit={handleFormSubmit}>
+              <form ref={form} onSubmit={sendEmail}>
                 <fieldset className="border-none bg-transparent">
                   <input
                     type="text"
                     onChange={(e) => setName(e.target.value)}
                     id="name"
                     value={name}
+                    name="from_name"
                     placeholder="Name*"
-                    className=" font-hertical bg-transparent w-[42%] h-[50px] border-b-[1px] border-white"
+                    className=" font-hertical bg-transparent w-[42%] h-[50px] border-b-[1px] border-white  text-white"
                   />
                   <input
-                    type="text"
+                    type="email"
                     value={Email}
+                    name="from_email"
                     onChange={(e) => setEmail(e.target.value)}
                     id="email"
                     placeholder="Email*"
-                    className=" font-hertical bg-transparent w-[42%] h-[50px] border-b-[1px] border-white ml-[100px]"
+                    className=" font-hertical bg-transparent w-[42%] h-[50px] border-b-[1px] border-white ml-[100px] text-white"
                   />
                 </fieldset>
 
                 <fieldset>
                   <textarea
+                    name="message"
                     placeholder="Project Information*"
-                    className=" font-hertical bg-transparent w-[100%] h-[50px] border-b-[1px] border-white mt-[5%] min-h-[100px] max-h-[200px]"
+                    className=" font-hertical bg-transparent w-[100%] h-[50px] border-b-[1px] border-white mt-[5%] min-h-[100px] max-h-[200px] text-white"
                     value={pInfo}
                     onChange={(e) => setpInfo(e.target.value)}
                   ></textarea>

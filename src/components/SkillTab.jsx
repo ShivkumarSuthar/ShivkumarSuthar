@@ -35,10 +35,10 @@ const skillsList = [
     img: node,
     tittle: "node",
   },
-  {
-    img: java,
-    tittle: "java",
-  },
+  // {
+  //   img: java,
+  //   tittle: "java",
+  // },
   {
     img: tailwind,
     tittle: "tailwind",
@@ -72,7 +72,7 @@ function SkillTab() {
           area of mastery...
         </h3>
       </div>
-      <div className="flex flex-wrap justify-center gap-5 pt-10 px-[10%]">
+      <div className="flex flex-wrap justify-center gap-5 pt-10 px-[20%]">
         {skillsList.map((skill, index) => (
           <span
             key={index}

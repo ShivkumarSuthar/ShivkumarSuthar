@@ -135,8 +135,8 @@ function Timeline() {
   const data = [
     {
       title: {
-        first: "world",
-        second: "class",
+        first: "House",
+        second: "Gym",
       },
       intro: {
         title: "we are",
@@ -146,8 +146,8 @@ function Timeline() {
     },
     {
       title: {
-        first: "world",
-        second: "class",
+        first: "Car",
+        second: "Dekho",
       },
       intro: {
         title: "we are",
@@ -157,8 +157,8 @@ function Timeline() {
     },
     {
       title: {
-        first: "world",
-        second: "class",
+        first: "Jayoti",
+        second: "Furniture",
       },
       intro: {
         title: "we are",
