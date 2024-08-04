@@ -141,58 +141,58 @@ function Timeline() {
   const containerRef = useRef(null);
   const sectionRefs = useRef([]);
 
-  useEffect(() => {
-    const container = containerRef.current;
-    const sections = sectionRefs.current;
+  // useEffect(() => {
+  //   const container = containerRef.current;
+  //   const sections = sectionRefs.current;
 
-    // Set up the horizontal scroll
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: container,
-        pin: true,
-        scrub: 1,
-        snap: 1 / (sections.length - 1),
-        end: () => "+=" + container.offsetWidth * (sections.length - 1)
-      }
-    });
+  //   // Set up the horizontal scroll
+  //   gsap.to(sections, {
+  //     xPercent: -100 * (sections.length - 1),
+  //     ease: "none",
+  //     scrollTrigger: {
+  //       trigger: container,
+  //       pin: true,
+  //       scrub: 1,
+  //       snap: 1 / (sections.length - 1),
+  //       end: () => "+=" + container.offsetWidth * (sections.length - 1)
+  //     }
+  //   });
 
-    // Animate each section
-    sections.forEach((section, index) => {
-      gsap.fromTo(section.querySelector('.timeline-intro-content, .timeline-even-intro-content'),
-        { opacity: 0, x: -50 },
-        {
-          opacity: 1,
-          x: 0,
-          duration: 1,
-          scrollTrigger: {
-            trigger: section,
-            containerAnimation: ScrollTrigger.getById("mainScroll"),
-            start: "left center",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
+  //   // Animate each section
+  //   sections.forEach((section, index) => {
+  //     gsap.fromTo(section.querySelector('.timeline-intro-content, .timeline-even-intro-content'),
+  //       { opacity: 0, x: -50 },
+  //       {
+  //         opacity: 1,
+  //         x: 0,
+  //         duration: 1,
+  //         scrollTrigger: {
+  //           trigger: section,
+  //           containerAnimation: ScrollTrigger.getById("mainScroll"),
+  //           start: "left center",
+  //           toggleActions: "play none none reverse"
+  //         }
+  //       }
+  //     );
 
-      // Animate project frame
-      gsap.fromTo(section.querySelector('.timeline-project-frame, .timeline-even-project-frame'),
-        { opacity: 0, scale: 0.8 },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          scrollTrigger: {
-            trigger: section,
-            containerAnimation: ScrollTrigger.getById("mainScroll"),
-            start: "left center",
-            toggleActions: "play none none reverse"
-          }
-        }
-      );
-    });
+  //     // Animate project frame
+  //     gsap.fromTo(section.querySelector('.timeline-project-frame, .timeline-even-project-frame'),
+  //       { opacity: 0, scale: 0.8 },
+  //       {
+  //         opacity: 1,
+  //         scale: 1,
+  //         duration: 1,
+  //         scrollTrigger: {
+  //           trigger: section,
+  //           containerAnimation: ScrollTrigger.getById("mainScroll"),
+  //           start: "left center",
+  //           toggleActions: "play none none reverse"
+  //         }
+  //       }
+  //     );
+  //   });
 
-  }, []);
+  // }, []);
 
   return (
     <section className="timeline-container" ref={containerRef}>

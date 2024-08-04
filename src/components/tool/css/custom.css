@@ -1,3 +1,6 @@
+body{
+  background: #fff;
+}
 .experience {
   background: url("../../../../public/assets/images/work-1600.jpg");
   background-size: 100% 100%;
@@ -26,10 +29,10 @@
   z-index: 0;
   /* border: 1px solid rgba(255, 0, 0, 0.164); */
 }
-.app{
+.app {
   height: 100%;
   width: 100%;
-flex-direction: row;
+  flex-direction: row;
   display: flex;
 }
 
@@ -115,24 +118,25 @@ flex-direction: row;
   font-family: mandala;
 }
 
-.mask, .body {
+.mask,
+.body {
   /* padding: 0 12%; */
   width: 50%;
   height: 100vh;
   color: #afa18f;
   font-size: 50px;
   cursor: default;
- display: flex;
- flex-direction: column;
- align-items: center;
- justify-content: center;
- width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 .mask p, .body p {
   width: 50%;
 }
 .mask .visual-text, .body .visual-text {
-  font-size: 130px;
+  font-size: 120px;
   font-family: "hertical", sans-serif;
   color: #b7ab98;
   text-align: center;
@@ -159,7 +163,7 @@ flex-direction: row;
 }
 .mask .hidden-text {
   margin-top: 100px;
-  font-size: 130px;
+  font-size: 120px;
   font-family: "hertical", sans-serif;
   color: #000;
   text-align: center;
@@ -185,8 +189,8 @@ flex-direction: row;
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
-  z-index: 0;
-  /* filter: blur(1); */
+  z-index: -1000;
+  /* opacity: 0.2; */
 }/*# sourceMappingURL=custom.css.map */
 
 .red{
@@ -815,7 +819,7 @@ body{
 /* download file btn */
 
 
-
+/* 
 .timeline-container {
   overflow: hidden;
   width: 100vw;
@@ -833,7 +837,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 /* Add any additional styles you need for your layout */
 .loader{
@@ -853,3 +857,4 @@ body{
 .loader1, .loader2, .loader3, .loader4, .loader5{
   position: absolute;
 }
+

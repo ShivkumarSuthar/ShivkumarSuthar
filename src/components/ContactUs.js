@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
-function ContactUs() {
+function ContactUs({className, id}) {
   const [name, setName] = useState("");
   const [Email, setEmail] = useState("");
   const [pInfo, setpInfo] = useState("");
@@ -34,7 +34,7 @@ function ContactUs() {
   };
 
   return (
-    <section className="contactSection">
+    <section className={"contactSection "+className} id={id}>
       <div className="container">
         <h1 className="header">
           Let's build

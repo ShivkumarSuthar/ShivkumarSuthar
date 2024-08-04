@@ -4,7 +4,7 @@ import CustomCursor from './CustomCursor';
 import BackgroundVideo from './BackgroundVideo';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger'; // Example plugin
-const Hero = () => {
+const Hero = ({className, id}) => {
 
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = CustomCursor();
@@ -14,8 +14,8 @@ const Hero = () => {
   
   return (
     <>
-      {/* <BackgroundVideo /> */}
-      <section className='main'>
+      <BackgroundVideo />
+      <section className={"main " + className} id={id}>
         <>
           <motion.div
             className="mask"

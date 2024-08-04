@@ -4,7 +4,7 @@ import dataList from "./dataList.json"
 function BackgroundVideo() {
     return (
         <video className='video-section' autoPlay loop muted>
-            <source src={dataList.media[1].video} type="video/mp4" />
+            <source src={dataList.media.video} type="video/mp4" />
         </video>
     );
 }

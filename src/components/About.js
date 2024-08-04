@@ -9,7 +9,7 @@ import DownloadResume from './DownloadResume';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = () => {
+const Hero = ({className, id}) => {
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = CustomCursor();
   const size = isHovered ? 400 : 40;
@@ -22,7 +22,7 @@ const Hero = () => {
 
 
   return (
-    <section className='main-about about-page'>
+    <section className={"main-about about-page "+className } id={id}>
       <motion.div
         className="mask-about"
         animate={{

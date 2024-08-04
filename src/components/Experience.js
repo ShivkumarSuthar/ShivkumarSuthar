@@ -1,10 +1,10 @@
 import React from "react";
 import dataList from "./dataList.json";
 
-function Experience() {
+function Experience({className, id}) {
   return (
     <>
-      <section className="container-experience experienceSection">
+      <section className={"container-experience experienceSection "+ className} id={id}>
         <div className="h-full flex flex-col justify-center relative">
           <h1 className="experienceTitle">
             experience

@@ -1,9 +1,9 @@
 import React from "react";
 import skillsList from "./dataList.json";
 
-function SkillTab() {
+function SkillTab({className, id}) {
   return (
-    <section className="container">
+    <section className={"container " +className} id={id}>
       <div className="headerText">
         <h1 className="mainTitle">
           Milestones and Skills Achievements
