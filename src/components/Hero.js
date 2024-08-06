@@ -14,7 +14,7 @@ const Hero = ({className, id}) => {
   
   return (
     <>
-      <BackgroundVideo />
+      {/* <BackgroundVideo /> */}
       <section className={"main " + className} id={id}>
         <>
           <motion.div

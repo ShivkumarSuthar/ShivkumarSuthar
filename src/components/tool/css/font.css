@@ -27,6 +27,16 @@
 }
 
 @font-face {
+  font-family: bavex;
+  src: url("../../../../public/assets/font/bavex/Bavex.ttf");
+}
+
+@font-face {
+  font-family: creamy-sugary;
+  src: url("../../../../public/assets/font/creamy_sugary/Creamy\ Sugary.otf");
+}
+
+@font-face {
   font-family: mandala;
   src: url("../../../../public/assets/font/hertical/Mandala\ Handmade.2a1dd753ee978da87508.otf");
 }

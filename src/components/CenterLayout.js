@@ -9,6 +9,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { ScrollSmoother } from 'gsap-trial/all';
+import Contact from './Contact';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
@@ -52,7 +53,8 @@ function CenterLayout() {
         <TimeLine />
         <Experience className="panel" id="experience"/>
         <hr/>
-        <ContactUs className="panel" id="contact"/>
+        {/* <ContactUs className="panel" id="contact"/> */}
+        <Contact className="panel" id="contact"/> 
       </div>
     </section>
   );

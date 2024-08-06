@@ -398,8 +398,9 @@ height: 100vh !important;
 
 .experienceDescription {
   font-size: 65px;
-  font-weight: bold;
-  font-family: 'Ganeta2', sans-serif;
+  font-weight: lighter;
+  /* font-family: creamy-sugary; */
+  font-family: lemon-sake;
   line-height: 120%;
   padding-top: 20px;
   text-transform: capitalize;
@@ -427,15 +428,16 @@ height: 100vh !important;
 
 .workHistoryItem {
   display: flex;
-  border-bottom: 1px solid rgba(231, 76, 60, 0.5);
+  /* border-bottom: 1px solid rgba(231, 76, 60, 0.5); */
   padding: 20px 15%;
   width: 100%;
+  font-family: creamy-sugary;
 }
 
 .date {
   width: 20%;
   padding-top: 20px;
-  font-family: 'Hertical', sans-serif;
+  /* font-family: '; */
   font-size: 25px;
 }
 
@@ -446,46 +448,42 @@ height: 100vh !important;
 }
 
 .profile {
-  font-family: 'Ganeta2', sans-serif;
+  /* font-family: 'Ganeta2', sans-serif; */
   font-weight: bold;
   font-size: 40px;
+  letter-spacing: 1.2px;
 }
 
 .organization {
-  font-family: 'Marcellus', serif;
+  /* font-family: 'Marcellus', serif; */
   font-size: 25px;
 }
 
 .location {
-  font-family: 'Marcellus', serif;
+  /* font-family: 'Marcellus', serif; */
   text-transform: capitalize;
   font-size: 15px;
+  color: #61605f;
 }
 
 /* contact page  */
-.contactSection {
+/* .contact-Section {
   height: 100vh;
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* .container {
-  width: 80%;
 } */
-
+/* 
 .header {
   font-size: 45px;
   color: white;
   font-family: 'Hertical', sans-serif;
-  padding-left: 5%;
   line-height: 90%;
 }
 
 .header .highlight {
   font-weight: bold;
-  color: #e53e3e; /* red-700 */
+  color: #e53e3e; 
 }
 
 .header .subHeader {
@@ -493,14 +491,12 @@ height: 100vh !important;
 }
 
 .contactInfo {
-  padding-left: 5%;
   display: flex;
   width: 100%;
-  padding-top: 2%;
 }
 
 .contactDetails {
-  width: 40%;
+  width:40%;
   font-family: 'Serif', sans-serif;
   font-weight: light;
 }
@@ -523,7 +519,7 @@ height: 100vh !important;
   color: white;
   font-size: 30px;
   font-family: 'Ganeta', sans-serif;
-  white-space: pre-wrap; /* Keeps line breaks in text */
+  white-space: pre-wrap;
   padding-bottom: 20px;
 }
 
@@ -562,13 +558,13 @@ height: 100vh !important;
   width: 20%;
   height: 50px;
   margin-top: 3%;
-  background-color: #e53e3e; /* red-900 */
+  background-color: #e53e3e; 
   color: white;
   border-radius: 9999px;
   font-family: 'Hertical', sans-serif;
   font-size: 15px;
   cursor: pointer;
-}
+} */
 
 /* timeline page */
 /* styles.css */
@@ -857,4 +853,5 @@ body{
 .loader1, .loader2, .loader3, .loader4, .loader5{
   position: absolute;
 }
+
 

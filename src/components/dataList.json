@@ -17,7 +17,9 @@
     "resume":""
   },
   "images": {
-    "texture": "./assets/images/arrow.png"
+    "texture": "./assets/images/arrow.png",
+    "telephone":"./assets/images/telephone-removebg-preview.png",
+    "telephone2":"./assets/images/quino-al-4SNUcHPiC8c-unsplash.jpg"
   },
   "work_history": [
     {

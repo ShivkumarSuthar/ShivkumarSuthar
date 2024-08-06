@@ -34,14 +34,8 @@ function ContactUs({className, id}) {
   };
 
   return (
-    <section className={"contactSection "+className} id={id}>
+    <section className={"contact-Section "+className} id={id}>
       <div className="container">
-        <h1 className="header">
-          Let's build
-          <span className="highlight"> greatest </span>
-          <br />
-          <span className="subHeader">Projects Together.</span>
-        </h1>
         <div className="contactInfo">
           <div className="contactDetails">
             <address>shiv.str21@gmail.com</address>
@@ -51,6 +45,12 @@ function ContactUs({className, id}) {
             </address>
           </div>
           <div className="message">
+          <h1 className="header">
+          Let's build
+          <span className="highlight"> greatest </span>
+          <br />
+          <span className="subHeader">Projects Together.</span>
+        </h1>
             <p className="messageText">
               I'm here to bring your concept to life, <br /> manage your
               ongoing project or expand <br /> existing development team.
