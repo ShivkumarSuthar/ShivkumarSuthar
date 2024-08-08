@@ -123,6 +123,7 @@ function Contact({ clasName, id }) {
       </div>
     </section>
     <div className='contact-bottom-wrapper'>
+    <div className='contact-bottom-content'>
         <div className='contact-details'>
           <address>Vaisali Nagar, Jaipur <br/> Rajasthan(302034)</address>
         </div>
@@ -130,6 +131,8 @@ function Contact({ clasName, id }) {
           <span><MdCall className='icon'/><a href="mailto:shiv.str21@gmail.com">shiv.str21@gmail.com</a></span>
           <span><SiMaildotru className='icon'/><a href='tel(+91 6377290604)'>+91 6377290604</a> </span>
         </div>
+        </div>
+        <div className='author'>developed by shivkumar suthar from bottom of his heart ❤️</div>
     </div>
     </>
   )

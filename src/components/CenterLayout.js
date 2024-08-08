@@ -8,10 +8,10 @@ import ContactUs from './ContactUs';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
-import { ScrollSmoother } from 'gsap-trial/all';
+// import { ScrollSmoother } from 'gsap-trial/all';
 import Contact from './Contact';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+// gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 function CenterLayout() {
   // useLayoutEffect(() => {

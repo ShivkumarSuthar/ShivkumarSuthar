@@ -326,8 +326,9 @@ height: 100vh !important;
 
 .subTitle {
   color: #d1d5db; /* gray-300 */
-  font-family: 'Hertical', sans-serif;
+  font-family:  lemon-sake;
   font-size: 30px;
+  padding-top: 10px;
 }
 
 .highlightText {
