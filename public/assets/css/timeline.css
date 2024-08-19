@@ -1,27 +1,7 @@
-/* * {
-    box-sizing: border-box;
-  }
-  html {
-    font-size: 14px;
-  }
-  body {
-    background: #f6f9fc;
-    font-family: "Open Sans", sans-serif;
-     color: #525f7f;
-  } */
-  /* h2 {
-    margin: 5%;
-    text-align: center;
-    font-size: 4rem;
-    font-weight: 100;
-  }
-  h1 {
-    margin: 4%;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 10;
-    top: 0;
-  } */
+.timeline-container{
+  overflow-x: visible !important;
+  width: 300vw !important;
+}
   .timeline {
     display: flex;
     flex-direction: column;

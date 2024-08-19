@@ -79,18 +79,23 @@ height: 90vh;
 }
 
 
-.button-field input{
-    border: 2px solid #cac5bd4f;
+.button-field button{
+    /* border: 2px solid #cac5bd4f; */
+    border-radius: 2px;
     width: 170px;
     height: 50px;
     margin: 10px 0;
     font-family: hertical;
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #fff;
     font-size: 12px;
-    border-radius: 0px;
     text-align: center;
     margin-right: 30px;
+}
+.service-button-selected{
+    background-color: #e53e3e !important;
+    color: #fff !important;
+    font-size: 15px !important;
 }
 .what-label{
     color: #fff;
@@ -172,6 +177,8 @@ fieldset{
     align-content: center;
     text-align: center; */
     align-items: center;
+    /* cursor: pointer; */
+    z-index: 1000;
 }
 .submit-icon {
     font-size: 20px;

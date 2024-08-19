@@ -1,0 +1,53 @@
+
+
+
+@font-face {
+  font-family: ganeta;
+  src: url("../font/Ganeta/Ganeta.otf");
+}
+
+@font-face {
+  font-family: ganeta2;
+  src: url("../font/Ganeta/Ganeta.ttf");
+}
+
+@font-face {
+  font-family: frosty;
+  src: url("../font/frosty/Frosty-Regular.ttf");
+}
+
+@font-face {
+  font-family: avant;
+  src: url("../font/avant-garde/Avantgarde-Bold.otf");
+}
+
+@font-face {
+  font-family: hertical;
+  src: url("../font/hertical/Hertical\ Sans.otf");
+}
+
+@font-face {
+  font-family: bavex;
+  src: url("../font/bavex/Bavex.ttf");
+}
+
+@font-face {
+  font-family: creamy-sugary;
+  src: url("../font/creamy_sugary/Creamy\ Sugary.otf");
+}
+
+@font-face {
+  font-family: mandala;
+  src: url("../font/hertical/Mandala\ Handmade.2a1dd753ee978da87508.otf");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+@font-face {
+  font-family: lemon-sake;
+  src: url("../font/Lemon Shake Shake.otf");
+}
+@font-face {
+  font-family: dark-dog;
+  src: url("../font/Dark\ College.otf");
+}

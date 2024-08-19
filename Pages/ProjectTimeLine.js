@@ -1,7 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+'use client'
+// import React, { useEffect } from 'react';
 // import gsap from 'gsap';
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import dataList from './dataList.json';
+import dataList from '@/public/assets/dataList';
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -39,11 +40,11 @@ function TimelineItem({ item, index }) {
                 scroll through more projects
               </p>
               <span className="timeline-scroll-arrow">
-                <img
+                {/* <img
                   src={dataList?.images?.texture}
                   alt="arrow"
                   className="timeline-scroll-arrow-image"
-                />
+                /> */}
               </span>
             </div>
           </div>
@@ -123,11 +124,11 @@ function TimelineItem({ item, index }) {
                 scroll through more work
               </p>
               <span className="timeline-scroll-arrow">
-                <img
+                {/* <img
                   src={dataList?.images?.texture}
                   alt="arrow"
                   className="timeline-scroll-arrow-image"
-                />
+                /> */}
               </span>
             </div>
           </div>
@@ -137,7 +138,7 @@ function TimelineItem({ item, index }) {
   }
 }
 
-function Timeline() {
+function ProjectTimeLine() {
   // const containerRef = useRef(null);
   // const sectionRefs = useRef([]);
 
@@ -195,7 +196,7 @@ function Timeline() {
   // }, []);
 
   return (
-    <section className="timeline-container">
+    <section className="timeline-container" >
       <div className="timeline-header">
         <h1 className="timeline-header-text">My Work</h1>
       </div>
@@ -214,4 +215,4 @@ function Timeline() {
   );
 }
 
-export default Timeline;
+export default ProjectTimeLine;
