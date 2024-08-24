@@ -44,7 +44,7 @@ const Contact = ({ clasName, id }) => {
           <div className='left-wrapper'>
             {/* <img src="/images/telephone.png" alt='telephone'/> */}
             <div className='text-contact'>
-              <h1 className='contact-heading'>Contact Me</h1>
+              <h1 className='contact-heading'>Get In Touch</h1>
               <span className='contact-title'>Have a Project?</span>
             </div>
           </div>
