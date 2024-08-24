@@ -8,6 +8,7 @@ import ProjectTimeLine from './ProjectTimeLine';
 import Contact from './Contact';
 import { Imprima } from 'next/font/google';
 import Link from 'next/link';
+import ScrollSection from './ScrollSection';
 
 
 
@@ -21,6 +22,7 @@ function CenterLayout() {
         <About/>
         <Skills/>
         <ProjectTimeLine/>
+        {/* <ScrollSection/> */}
         <Experience/>
         <Contact/>
       </div>

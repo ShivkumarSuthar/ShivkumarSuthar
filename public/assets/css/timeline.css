@@ -1,6 +1,17 @@
-.timeline-container{
+/* .timeline-container{
   overflow-x: visible !important;
   width: 300vw !important;
+} */
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.timeline-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
   .timeline {
     display: flex;

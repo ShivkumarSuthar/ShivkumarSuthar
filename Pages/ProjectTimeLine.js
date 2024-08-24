@@ -1,10 +1,10 @@
 'use client'
-// import React, { useEffect } from 'react';
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import React, { useRef, useEffect } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import dataList from '@/public/assets/dataList';
 
-// gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 function TimelineItem({ item, index }) {
   if (!item || !item.title || !item.intro) {
@@ -139,72 +139,45 @@ function TimelineItem({ item, index }) {
 }
 
 function ProjectTimeLine() {
-  // const containerRef = useRef(null);
-  // const sectionRefs = useRef([]);
+  const sectionRef = useRef(null);
+  const triggerRef = useRef(null);
 
-  // useEffect(() => {
-  //   const container = containerRef.current;
-  //   const sections = sectionRefs.current;
+  useEffect(() => {
+    const pin = gsap.fromTo(
+      sectionRef.current,
+      {
+        translateX: 0,
+      },
+      {
+        translateX: `-${(dataList?.projects?.length - 1) * 100}vw`,
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: triggerRef.current || "300vh",
+          start: "top",
+          end: () => `+=${(dataList?.projects?.length - 1) * window.innerWidth}`,
+          scrub: 0.6,
+          pin: true,
+        },
+      }
+    );
 
-  //   // Set up the horizontal scroll
-  //   gsap.to(sections, {
-  //     xPercent: -100 * (sections.length - 1),
-  //     ease: "none",
-  //     scrollTrigger: {
-  //       trigger: container,
-  //       pin: true,
-  //       scrub: 1,
-  //       snap: 1 / (sections.length - 1),
-  //       end: () => "+=" + container.offsetWidth * (sections.length - 1)
-  //     }
-  //   });
-
-  //   // Animate each section
-  //   sections.forEach((section, index) => {
-  //     gsap.fromTo(section.querySelector('.timeline-intro-content, .timeline-even-intro-content'),
-  //       { opacity: 0, x: -50 },
-  //       {
-  //         opacity: 1,
-  //         x: 0,
-  //         duration: 1,
-  //         scrollTrigger: {
-  //           trigger: section,
-  //           containerAnimation: ScrollTrigger.getById("mainScroll"),
-  //           start: "left center",
-  //           toggleActions: "play none none reverse"
-  //         }
-  //       }
-  //     );
-
-  //     // Animate project frame
-  //     gsap.fromTo(section.querySelector('.timeline-project-frame, .timeline-even-project-frame'),
-  //       { opacity: 0, scale: 0.8 },
-  //       {
-  //         opacity: 1,
-  //         scale: 1,
-  //         duration: 1,
-  //         scrollTrigger: {
-  //           trigger: section,
-  //           containerAnimation: ScrollTrigger.getById("mainScroll"),
-  //           start: "left center",
-  //           toggleActions: "play none none reverse"
-  //         }
-  //       }
-  //     );
-  //   });
-
-  // }, []);
+    return () => {
+      pin.kill();
+    };
+  }, []);
 
   return (
-    <section className="timeline-container" >
-      <div className="timeline-header">
-        <h1 className="timeline-header-text">My Work</h1>
-      </div>
-      <div className="timeline-sections-wrapper" style={{ display: 'flex' }}>
+    <>
+   
+    <section className="timeline-container scroll-section-outer" ref={triggerRef}>
+    <div className="timeline-header">
+            <h1 className="timeline-header-text">My Work</h1>
+          </div>
+      <div className="timeline-sections-wrapper scroll-section-inner" ref={sectionRef} style={{ display: 'flex' }}>
         {dataList?.projects?.map((item, index) => (
-          <div 
-            key={index} 
-            // ref={el => sectionRefs.current[index] = el}
+          <div className='scroll-section' 
+            key={index}
             style={{ minWidth: '100vw', minHeight: '100vh' }}
           >
             <TimelineItem item={item} index={index} />
@@ -212,6 +185,7 @@ function ProjectTimeLine() {
         ))}
       </div>
     </section>
+    </>
   );
 }
 

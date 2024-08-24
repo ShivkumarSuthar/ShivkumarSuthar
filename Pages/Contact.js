@@ -79,6 +79,7 @@ const Contact = ({ clasName, id }) => {
                       type='button'
                       className={`service-button-${selectedService === "others" ? "selected" : ""}`}
                       onClick={() => setSelectedService("others")}
+                      onDoubleClick={() => setSelectedService("")}
                     >
                       Others
                     </button>
