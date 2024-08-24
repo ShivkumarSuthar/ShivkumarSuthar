@@ -5,7 +5,7 @@ function Sound() {
 
 
   return (
-   
+   <></>
   );
 }
 
