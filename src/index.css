@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+/* Custom scrollbar and ambient styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
+
+.custom-editor-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-editor-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.2);
+}
+
+/* Force hide system cursor globally when custom cursor active */
+.custom-cursor-active,
+.custom-cursor-active *,
+.custom-cursor-active a,
+.custom-cursor-active button,
+.custom-cursor-active input,
+.custom-cursor-active select,
+.custom-cursor-active textarea,
+.custom-cursor-active [role="button"],
+.custom-cursor-active [id^="scroll-down-btn"] {
+  cursor: none !important;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite reverse;
+}
+
+

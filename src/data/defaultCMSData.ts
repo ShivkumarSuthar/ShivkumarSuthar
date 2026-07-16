@@ -1,0 +1,526 @@
+/**
+ * @license
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
+import { CMSData, WorkspaceInfo, Achievement } from '../types/cms';
+
+// Helper to get formatted date string relative to today
+const getDateOffset = (offsetDays: number): string => {
+  const d = new Date('2026-07-12'); // Fixed anchor from metadata for consistency
+  d.setDate(d.getDate() - offsetDays);
+  return d.toISOString().split('T')[0];
+};
+
+export const defaultWorkspaces: WorkspaceInfo[] = [
+  { id: "work-prog", name: "Programming", description: "Master full-stack web engineering, edge servers, and cloud scaling.", icon: "Code" },
+  { id: "work-design", name: "Design & UI/UX", description: "Learn typography, interface wireframing, and product usability.", icon: "Palette" },
+  { id: "work-ai", name: "Artificial Intelligence", description: "Deep-dive into LLMs, prompt engineering, and model fine-tuning.", icon: "BrainCircuit" },
+  { id: "work-lang", name: "Languages", description: "Learn professional global communication and grammar systems.", icon: "Languages" },
+  { id: "work-bus", name: "Business & Management", description: "Study startup mechanics, venture capital, and leadership frameworks.", icon: "Briefcase" },
+  { id: "work-college", name: "College Preparation", description: "Prepare for computer science core degrees and math concepts.", icon: "GraduationCap" },
+  { id: "work-prep", name: "Interview Prep", description: "Ace whiteboard rounds, system design, and competitive coding.", icon: "ShieldCheck" }
+];
+
+export const defaultAchievements: Achievement[] = [
+  { id: "ach-1", title: "Quick Starter", description: "Generated your first comprehensive AI course syllabus.", icon: "⚡", unlockedAt: getDateOffset(15) },
+  { id: "ach-2", title: "Perfect Score", description: "Achieved a 100% on a lesson quiz.", icon: "🎯", unlockedAt: getDateOffset(10) },
+  { id: "ach-3", title: "Curriculum Master", description: "Finished all modules inside an academic study track.", icon: "👑", unlockedAt: getDateOffset(5) },
+  { id: "ach-4", title: "Daily Habit", description: "Maintained a 7-day learning streak.", icon: "🔥", unlockedAt: getDateOffset(2) }
+];
+
+export const defaultCMSData: CMSData = {
+  workspaces: defaultWorkspaces,
+  activeWorkspaceId: "work-prog",
+  currentStreak: 12,
+  longestStreak: 21,
+  todaysGoalHours: 2.0,
+  weeklyGoalHours: 14.0,
+  monthlyGoalHours: 60.0,
+  studyTimeSeconds: 43200, // 12 hours of accumulated active study time
+  achievements: defaultAchievements,
+  
+  studySpaces: [
+    {
+      id: "space-fse",
+      workspaceId: "work-prog",
+      title: "Full-Stack Engineering & Server Architecture",
+      description: "Master modern multi-tier web development, React Server Components, Edge computing, database scaling, and production workflows.",
+      coverImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=400&h=250&auto=format&fit=crop",
+      banner: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&h=400&auto=format&fit=crop",
+      mentor: "Theo Browne",
+      category: "Web Development",
+      difficulty: "Intermediate",
+      estimatedHours: 120,
+      tags: ["React", "Next.js", "Server Components", "Vercel", "Tailwind CSS"],
+      createdDate: getDateOffset(30),
+      updatedDate: getDateOffset(0),
+      lastOpened: getDateOffset(0),
+      completed: false,
+      certificateEligible: false,
+      todos: [
+        {
+          id: "todo-fse-1",
+          title: "Finish Redis distributed caching tutorial",
+          priority: "high",
+          dueDate: getDateOffset(-1),
+          completed: true,
+          tags: ["Redis", "Caching"]
+        },
+        {
+          id: "todo-fse-2",
+          title: "Watch HTTP/3 transport layer analysis",
+          priority: "medium",
+          dueDate: getDateOffset(-2),
+          completed: false,
+          tags: ["Networking"]
+        },
+        {
+          id: "todo-fse-3",
+          title: "Solve 5 LeetCode DP questions",
+          priority: "high",
+          dueDate: getDateOffset(2),
+          completed: false,
+          tags: ["LeetCode", "DP"]
+        }
+      ],
+      projects: [
+        {
+          id: "proj-fse-1",
+          name: "EdgeAuth: Global Auth Service",
+          type: "portfolio",
+          status: "In Progress",
+          githubUrl: "https://github.com/alexcarter/edgeauth",
+          liveUrl: "https://edgeauth.dev",
+          techStack: ["Next.js", "Clerk", "Upstash Redis", "Cloudflare Workers"],
+          completionDate: getDateOffset(5),
+          notes: "Implementing JWT verification directly inside Edge middleware to achieve < 5ms auth latency globally.",
+          requirements: "1. Setup Cloudflare Workers\n2. Configure Redis distributed replication\n3. Match JWT signatures at the Edge",
+          resources: ["https://cloudflare.com", "https://upstash.com"],
+          submitted: false
+        }
+      ],
+      modules: [
+        {
+          id: "mod-react",
+          title: "Core React Deep Dive",
+          description: "Explore the internal architecture of React 19, fiber tree reconciliation, scheduling, and hook states.",
+          completed: false,
+          score: 88,
+          aiFeedback: "Excellent understanding of the client side lifecycle. Focus on mastering server reconciliation protocols.",
+          revisionSuggestions: "Review the difference between client-side effects and streaming hydration pipelines.",
+          chapters: [
+            {
+              id: "chap-hooks",
+              title: "Advanced React Hooks & Performance",
+              lessons: [
+                {
+                  id: "les-useeffect",
+                  title: "Mastering the useEffect Lifecycle & Cleanup",
+                  completed: true,
+                  duration: 45,
+                  videoUrl: "https://www.youtube.com/watch?v=QQYeipc_cik",
+                  resourceLink: "https://react.dev/reference/react/useEffect",
+                  notes: "### Key Takeaways from useEffect Lifecycle\n- **Cleanup function**: Executes before the hook runs again and upon unmounting. Crucial for resetting event listeners and clearing WebSockets.\n- **Dependency array**: React uses `Object.is` for comparison. Avoid arrays or objects directly in dependency arrays without stable memoization (`useMemo` / `useCallback`).\n- **Race conditions**: Always use a clean-up flag `active = true` inside the fetch callback, setting it to `false` in cleanup to disregard delayed network responses.",
+                  attachments: ["https://react.dev/reference/react/useEffect", "https://overreacted.io/a-complete-guide-to-useeffect/"],
+                  tags: ["React", "Hooks", "Lifecycle"],
+                  objectives: [
+                    "Identify why the cleanup callback triggers",
+                    "Avert memory leaks and subscription overlaps",
+                    "Handle async API calls safely inside hooks"
+                  ],
+                  resources: [
+                    { id: "res-useeffect-1", title: "React Dev Hooks API Reference", type: "pdf", url: "https://react.dev/reference/react" },
+                    { id: "res-useeffect-2", title: "A Complete Guide to useEffect by Dan Abramov", type: "markdown", url: "https://overreacted.io/a-complete-guide-to-useeffect/" }
+                  ],
+                  quiz: [
+                    {
+                      id: "q-useeffect-1",
+                      type: "MCQ",
+                      question: "When does the cleanup function in useEffect run?",
+                      options: [
+                        "Only when the component is unmounted.",
+                        "Before every re-run of the effect and when the component is unmounted.",
+                        "Directly after the main effect function finishes execution.",
+                        "When state variables inside the component change, regardless of dependencies."
+                      ],
+                      correctIndex: 1,
+                      explanation: "The cleanup function runs immediately before running the effect again with new dependencies, as well as when the component unmounts. This guarantees zero leakage."
+                    },
+                    {
+                      id: "q-useeffect-2",
+                      type: "True/False",
+                      question: "Including a raw javascript object directly in the dependency array can cause infinite rendering loops.",
+                      options: ["True", "False"],
+                      correctIndex: 0,
+                      explanation: "True. Because React uses reference equality (Object.is) for dependencies, a new object reference created on every render triggers the effect again."
+                    }
+                  ],
+                  quizTaken: true,
+                  quizScore: 100,
+                  assignments: [
+                    {
+                      id: "assign-useeffect-1",
+                      type: "coding",
+                      title: "Secure Socket Cleanup Handler",
+                      requirements: "Build a custom hook `useWebSocket` that connects to a URL, exposes messages, and properly calls disconnect on unmount.",
+                      resources: ["https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API"],
+                      submitted: true,
+                      submissionText: "function useWebSocket(url) {\n  useEffect(() => {\n    const ws = new WebSocket(url);\n    return () => ws.close();\n  }, [url]);\n}",
+                      grade: "A",
+                      feedback: "Perfect socket disposal block inside the cleanup function. Robust and lightweight."
+                    }
+                  ]
+                },
+                {
+                  id: "les-usememo",
+                  title: "Optimizing Computations with useMemo & useCallback",
+                  completed: true,
+                  duration: 35,
+                  videoUrl: "https://www.youtube.com/watch?v=DEPwA3mv_yI",
+                  resourceLink: "https://react.dev/reference/react/useMemo",
+                  notes: "### useMemo vs useCallback\n- `useMemo`: Caches the **result** of a function computation.\n- `useCallback`: Caches the **function instance** itself.\n- Useful for avoiding expensive calculations on every render cycle.\n- **Rule of Thumb**: Do not over-optimize. Only use when there are measurable render bottlenecks or when passing callbacks to memoized children using `React.memo`.",
+                  attachments: ["https://react.dev/reference/react/useMemo"],
+                  tags: ["React", "Performance", "Memoization"],
+                  objectives: [
+                    "Distinguish memoized values from cached handler functions",
+                    "Identify when memoization is actually necessary",
+                    "Optimize rendering of list items and callbacks"
+                  ],
+                  quiz: [
+                    {
+                      id: "q-usememo-1",
+                      type: "MCQ",
+                      question: "What is the primary difference between useMemo and useCallback?",
+                      options: [
+                        "useMemo returns a memoized value; useCallback returns a memoized function.",
+                        "useMemo runs asynchronously; useCallback runs synchronously.",
+                        "useMemo is deprecated in React 19; useCallback is the modern replacement.",
+                        "useMemo only supports array dependencies; useCallback supports objects."
+                      ],
+                      correctIndex: 0,
+                      explanation: "useMemo stores the computation output, whereas useCallback returns the function itself to avoid trigger duplication in child trees."
+                    }
+                  ]
+                },
+                {
+                  id: "les-usereducer",
+                  title: "Managing Complex State with useReducer",
+                  completed: false,
+                  duration: 50,
+                  videoUrl: "https://www.youtube.com/watch?v=kK_Wqx3RnHk",
+                  resourceLink: "https://react.dev/reference/react/useReducer",
+                  notes: "### useReducer Overview\n`useReducer` is an alternative to `useState` for complex state logic.\n\nIt takes a reducer function of type `(state, action) => newState` and an initial state, returning the current state paired with a `dispatch` method.",
+                  attachments: [],
+                  tags: ["React", "State Management"],
+                  objectives: ["Implement unidirectional dispatch loops", "Decouple state transitions from rendering templates"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          id: "mod-nextjs",
+          title: "Next.js App Router & Server Components",
+          description: "Shift your mental model from client-rendered to hybrid server/client applications utilizing modern routing frameworks.",
+          chapters: [
+            {
+              id: "chap-rsc",
+              title: "React Server Components (RSC) Architecture",
+              lessons: [
+                {
+                  id: "les-rsc-intro",
+                  title: "RSC vs Client Components: The Core Difference",
+                  completed: true,
+                  duration: 60,
+                  videoUrl: "https://www.youtube.com/watch?v=9_t9O_Y7Z_E",
+                  resourceLink: "https://nextjs.org/docs/app/building-your-application/rendering/server-components",
+                  notes: "### React Server Components (RSC) Summary\n- **Server-Side only execution**: RSCs compile and execute on the server, generating static JSX payloads. Zero impact on browser bundle sizes!\n- **Data Fetching**: Directly await promises/databases in RSC async functions.\n- **Boundaries**: Client components are marked with `'use client'`. Server components can import client components, but client components cannot import server components directly (must pass them as `children` or props).",
+                  attachments: ["https://nextjs.org/docs/app/building-your-application/rendering/server-components"],
+                  tags: ["Next.js", "RSC", "Server Rendering"]
+                },
+                {
+                  id: "les-suspense",
+                  title: "Streaming and Suspense Boundaries",
+                  completed: false,
+                  duration: 40,
+                  videoUrl: "https://www.youtube.com/watch?v=8mG-ZscI2D8",
+                  resourceLink: "https://nextjs.org/docs/app/building-your-application/routing/loading-templates-and-suspense",
+                  notes: "### Streaming with Suspense\nStreaming allows you to break down the page's HTML into smaller chunks and progressively stream those chunks from the server to the client.",
+                  attachments: [],
+                  tags: ["Next.js", "Streaming", "UX"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "space-sys",
+      workspaceId: "work-prog",
+      title: "Distributed Systems & System Design",
+      description: "Learn how to build resilient, highly available, and horizontally scalable backend infrastructures supporting millions of RPS.",
+      coverImage: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=400&h=250&auto=format&fit=crop",
+      banner: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?q=80&w=1200&h=400&auto=format&fit=crop",
+      mentor: "Hussein Nasser",
+      category: "Architecture",
+      difficulty: "Advanced",
+      estimatedHours: 80,
+      tags: ["Distributed Systems", "Web Sockets", "gRPC", "Docker", "Nginx"],
+      createdDate: getDateOffset(25),
+      updatedDate: getDateOffset(2),
+      lastOpened: getDateOffset(2),
+      completed: false,
+      certificateEligible: false,
+      todos: [
+        {
+          id: "todo-sys-1",
+          title: "Implement Nginx reverse proxy load balancer locally",
+          priority: "high",
+          dueDate: getDateOffset(3),
+          completed: false,
+          tags: ["Nginx", "DevOps"]
+        }
+      ],
+      projects: [],
+      modules: [
+        {
+          id: "mod-protocols",
+          title: "Network Protocols & Communication Models",
+          description: "Analyze the transport layer, OSI models, connection handshakes, and distributed communication APIs.",
+          chapters: [
+            {
+              id: "chap-http",
+              title: "Evolution of HTTP Protocols",
+              lessons: [
+                {
+                  id: "les-http3",
+                  title: "HTTP/3 Deep Dive & QUIC Protocol Analysis",
+                  completed: false,
+                  duration: 55,
+                  videoUrl: "https://www.youtube.com/watch?v=gT83bQfF-v4",
+                  resourceLink: "https://web.dev/common-http3-questions/",
+                  notes: "### QUIC Protocol Overview\nQUIC replaces TCP with UDP on the transport layer to provide stream multiplexing and connection migration.",
+                  attachments: [],
+                  tags: ["HTTP/3", "QUIC", "Networking"]
+                },
+                {
+                  id: "les-grpc",
+                  title: "Introduction to gRPC and Protocol Buffers",
+                  completed: true,
+                  duration: 50,
+                  videoUrl: "https://www.youtube.com/watch?v=Yw4rkaTC0f8",
+                  resourceLink: "https://grpc.io/docs/what-is-grpc/introduction/",
+                  notes: "### gRPC & Protocol Buffers Summary\n- **HTTP/2 Transport**: Leverages bidirectional streaming and header compression.\n- **Protocol Buffers**: Strongly typed binary serialization instead of bulky JSON, resulting in significant network efficiency.\n- **Usage**: Perfect for internal microservice communication where throughput is paramount.",
+                  attachments: ["https://grpc.io/docs/what-is-grpc/introduction/"],
+                  tags: ["gRPC", "Protobuf", "APIs"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: "space-dsa",
+      workspaceId: "work-prep",
+      title: "Algorithms & Competitive Programming (LeetCode)",
+      description: "Ace technical whiteboard sessions and master complex algorithms, dynamic programming, tree traversals, and graphs.",
+      coverImage: "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=400&h=250&auto=format&fit=crop",
+      banner: "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&h=400&auto=format&fit=crop",
+      mentor: "NeetCode",
+      category: "Computer Science",
+      difficulty: "Advanced",
+      estimatedHours: 60,
+      tags: ["LeetCode", "Interview Prep", "DSA", "Algorithms"],
+      createdDate: getDateOffset(45),
+      updatedDate: getDateOffset(4),
+      lastOpened: getDateOffset(4),
+      completed: false,
+      certificateEligible: false,
+      todos: [
+        {
+          id: "todo-dsa-1",
+          title: "Review graph BFS vs DFS cycle detection templates",
+          priority: "high",
+          dueDate: getDateOffset(0),
+          completed: true,
+          tags: ["Graphs", "Recursion"]
+        }
+      ],
+      projects: [],
+      modules: [
+        {
+          id: "mod-arrays",
+          title: "Arrays & Sliding Window",
+          description: "Solidify core dynamic sizing arrays, hash maps, and pointer progression templates.",
+          chapters: [
+            {
+              id: "chap-twopointers",
+              title: "Two Pointers Strategy",
+              lessons: [
+                {
+                  id: "les-twosum",
+                  title: "LeetCode 1: Two Sum (Easy)",
+                  completed: true,
+                  duration: 25,
+                  videoUrl: "https://www.youtube.com/watch?v=KLlXCFG5Tk0",
+                  resourceLink: "https://leetcode.com/problems/two-sum/",
+                  notes: "### Two Sum Analysis\n- **Brute Force**: $O(n^2)$ time complexity using double loops.\n- **Hash Map Solution**: $O(n)$ time and space complexity.\n- **Logic**: Iterate and record difference `target - current_value` in hash map. If value exists in hash map, indices are located.",
+                  attachments: [],
+                  tags: ["Two Pointers", "Hash Map", "LeetCode"]
+                },
+                {
+                  id: "les-validpalindrome",
+                  title: "LeetCode 125: Valid Palindrome (Easy)",
+                  completed: true,
+                  duration: 20,
+                  videoUrl: "https://www.youtube.com/watch?v=jJXJ16kPFWg",
+                  resourceLink: "https://leetcode.com/problems/valid-palindrome/",
+                  notes: "### Valid Palindrome Notes\n- Use two pointers, one at start ($L = 0$) and one at end ($R = len - 1$).\n- Move pointers inward, skipping non-alphanumeric characters using `isalnum()`.\n- Compare case-insensitive characters. Return `false` immediately on mismatch. If indices cross, return `true`.",
+                  attachments: [],
+                  tags: ["Two Pointers", "String"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  
+  bookmarks: [
+    {
+      id: "bm-1",
+      title: "Official React Hooks Documentation",
+      url: "https://react.dev/reference/react",
+      type: "article",
+      studySpaceId: "space-fse",
+      folderName: "React Reference Docs",
+      createdDate: getDateOffset(10)
+    },
+    {
+      id: "bm-2",
+      title: "NeetCode All DSA Sheet Roadmap",
+      url: "https://neetcode.io/practice",
+      type: "video",
+      studySpaceId: "space-dsa",
+      folderName: "Interview Resources",
+      createdDate: getDateOffset(8)
+    }
+  ],
+  
+  activityLog: [
+    {
+      id: "log-1",
+      type: "complete_lesson",
+      title: "Finished 'Mastering the useEffect Lifecycle & Cleanup'",
+      description: "Alex marked this lesson as complete under 'Advanced React Hooks & Performance' chapter.",
+      timestamp: new Date('2026-07-12T14:30:00Z').toISOString(),
+      studySpaceId: "space-fse",
+      duration: 45
+    },
+    {
+      id: "log-2",
+      type: "add_note",
+      title: "Created notes on 'RSC vs Client Components: The Core Difference'",
+      description: "Added comprehensive notes detailing server-side compilation, network limits, and client bundle sizes.",
+      timestamp: new Date('2026-07-11T16:15:00Z').toISOString(),
+      studySpaceId: "space-fse"
+    },
+    {
+      id: "log-3",
+      type: "complete_lesson",
+      title: "Solved 'LeetCode 125: Valid Palindrome (Easy)'",
+      description: "Completed the lesson and wrote two-pointer optimization documentation.",
+      timestamp: new Date('2026-07-10T11:40:00Z').toISOString(),
+      studySpaceId: "space-dsa",
+      duration: 20
+    },
+    {
+      id: "log-4",
+      type: "start_course",
+      title: "Started System Design & Distributed Systems Space",
+      description: "Alex initialized a new Study Space targeting backend system resilience and protocols.",
+      timestamp: new Date('2026-07-08T09:00:00Z').toISOString(),
+      studySpaceId: "space-sys"
+    }
+  ],
+  
+  mentors: [
+    {
+      id: "mentor-theo",
+      name: "Theo Browne",
+      avatar: "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?q=80&w=150&h=150&auto=format&fit=crop",
+      specialty: "Next.js, Edge Nodes, DX, Product Design",
+      bio: "Creator of t3-oss, Ping.gg CEO, former Twitch Engineer. Focuses on pragmatic, high-velocity developer experience.",
+      company: "Ping.gg / t3-oss"
+    },
+    {
+      id: "mentor-hussein",
+      name: "Hussein Nasser",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&h=150&auto=format&fit=crop",
+      specialty: "Distributed Systems, HTTP Protocols, Databases",
+      bio: "Software Architect and YouTuber. Deeply analyzes internal network protocols, reverse proxies, and DB indexes.",
+      company: "GIS Architect / Backend Engineer"
+    },
+    {
+      id: "mentor-neet",
+      name: "NeetCode",
+      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=150&h=150&auto=format&fit=crop",
+      specialty: "Algorithms, Coding Interviews, Data Structures",
+      bio: "Ex-Google Engineer, founder of neetcode.io. Renowned for creating incredibly clear, step-by-step whiteboard explanations.",
+      company: "NeetCode.io"
+    },
+    {
+      id: "mentor-jonas",
+      name: "Jonas Schmedtmann",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&h=150&auto=format&fit=crop",
+      specialty: "Full Stack JavaScript, HTML, CSS, Node.js",
+      bio: "Leading Udemy instructor with 1M+ students. Teaches highly structural, detail-oriented programming architectures.",
+      company: "Udemy"
+    }
+  ],
+  
+  dailyStudyHours: {
+    [getDateOffset(0)]: 2.8,
+    [getDateOffset(1)]: 1.5,
+    [getDateOffset(2)]: 3.2,
+    [getDateOffset(3)]: 0,
+    [getDateOffset(4)]: 2.4,
+    [getDateOffset(5)]: 4.1,
+    [getDateOffset(6)]: 1.2,
+    [getDateOffset(7)]: 3.5,
+    [getDateOffset(8)]: 2.2,
+    [getDateOffset(9)]: 1.8,
+    [getDateOffset(10)]: 0,
+    [getDateOffset(11)]: 2.9,
+    [getDateOffset(12)]: 3.8,
+    [getDateOffset(13)]: 1.6,
+    [getDateOffset(14)]: 2.1,
+    [getDateOffset(15)]: 0,
+    [getDateOffset(16)]: 3.0,
+    [getDateOffset(17)]: 1.4,
+    [getDateOffset(18)]: 2.7,
+    [getDateOffset(19)]: 4.5,
+    [getDateOffset(20)]: 1.1,
+    [getDateOffset(21)]: 0,
+    [getDateOffset(22)]: 2.8,
+    [getDateOffset(23)]: 3.4,
+    [getDateOffset(24)]: 1.9,
+    [getDateOffset(25)]: 2.5,
+    [getDateOffset(26)]: 0,
+    [getDateOffset(27)]: 3.1,
+    [getDateOffset(28)]: 1.8,
+    [getDateOffset(29)]: 2.0,
+  },
+  
+  resumeState: {
+    lastSpaceId: "space-fse",
+    lastModuleId: "mod-react",
+    lastChapterId: "chap-hooks",
+    lastLessonId: "les-useeffect",
+    lastResourceUrl: "https://www.youtube.com/watch?v=QQYeipc_cik"
+  }
+};

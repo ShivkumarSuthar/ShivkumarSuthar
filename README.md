@@ -1,30 +1,20 @@
-# Shivkumar Suthar
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-Full Stack Developer building web applications with JavaScript.
+# Run and deploy your AI Studio app
 
-Currently focused on React, Next.js, Node.js and MongoDB.
+This contains everything you need to run your app locally.
 
-## Experience
+View your app in AI Studio: https://ai.studio/apps/cd07b8df-de86-415e-90fc-f03c09b3f478
 
-2024 — Present
-MERN Stack Developer @ Dev Technosys
+## Run Locally
 
-2022 — 2024
-Content Developer @ Viseven
+**Prerequisites:**  Node.js
 
-## Selected Work
 
-→ Portfolio Dashboard  
-→ E-Commerce Admin Portal  
-→ IT Agency Website  
-→ GitHub Repository Manager
-
-## Tech
-
-JavaScript · React · Next.js · Node.js · Express · MongoDB · MySQL
-
-## Contact
-
-LinkedIn
-Portfolio
-Email
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

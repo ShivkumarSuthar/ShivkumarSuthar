@@ -1,0 +1,8 @@
+{
+  "name": "Personal Portfolio",
+  "description": "A highly polished, responsive personal portfolio built with React, Tailwind CSS, and elegant micro-animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
