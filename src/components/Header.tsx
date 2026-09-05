@@ -96,8 +96,8 @@ export default function Header({
           className={`transition-all duration-300 flex items-center justify-between w-full relative ${
             scrolled 
               ? themeMode === 'light'
-                ? 'bg-white/85 backdrop-blur-xl border border-zinc-200/60 shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-2xl py-3 px-6'
-                : 'bg-zinc-950/75 backdrop-blur-xl border border-zinc-900/60 shadow-[0_8px_30px_rgba(0,0,0,0.4)] rounded-2xl py-3 px-6' 
+                ? 'bg-white/85 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.06)] rounded-2xl py-3 px-6'
+                : 'bg-zinc-950/75 backdrop-blur-xl shadow-[0_8px_30px_rgba(0,0,0,0.4)] rounded-2xl py-3 px-6' 
               : 'bg-transparent py-2'
           }`}
         >
