@@ -16,12 +16,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
       {/* 1. Availability Status Bar */}
       <div
         id="availability-banner"
-        className="w-full py-2.5 sm:py-3 px-4 rounded-xl bg-white text-[#1e40af] border-2 border-[#2563eb] flex items-center justify-center gap-2.5 shadow-xs font-semibold text-sm sm:text-base tracking-normal"
+        className="w-full py-2.5 sm:py-3 px-4 rounded-md bg-[#10b981] text-white flex items-center justify-center gap-2.5 shadow-sm font-medium text-sm sm:text-base tracking-normal"
       >
-        <div className="w-5 h-5 rounded-full border-2 border-[#2563eb] flex items-center justify-center shrink-0 bg-[#eff6ff]">
-          <Check className="w-3.5 h-3.5 text-[#2563eb] stroke-[3]" />
+        <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center shrink-0 bg-transparent">
+          <Check className="w-3.5 h-3.5 text-white stroke-[3]" />
         </div>
-        <span>{PERSONAL_INFO.availabilityText}</span>
+        <span>I'm currently available for work</span>
       </div>
 
       {/* 2. Introduction to Me */}
@@ -39,7 +39,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           {/* Email row with letter envelope icon */}
           <div className="flex items-center gap-2.5">
             <svg
-              className="w-5 h-4 shrink-0 text-[#2563eb]"
+              className="w-5 h-4 shrink-0 text-[var(--color-link)]"
               viewBox="0 0 24 18"
               fill="none"
               stroke="currentColor"
@@ -52,7 +52,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
               My personal email address is{' '}
               <a
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="text-[#2563eb] hover:underline font-semibold"
+                className="text-[var(--color-link)] hover:underline font-semibold"
               >
                 {PERSONAL_INFO.email}
               </a>
@@ -72,7 +72,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
               href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#2563eb] hover:underline font-semibold"
+              className="text-[var(--color-link)] hover:underline font-semibold"
             >
               My LinkedIn profile can be viewed here
             </a>
@@ -90,7 +90,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           In{' '}
           <button
             onClick={() => onSelectTab('portfolio')}
-            className="text-[#2563eb] hover:underline font-semibold cursor-pointer"
+            className="text-[var(--color-link)] hover:underline font-semibold cursor-pointer"
           >
             my most recent role
           </button>
@@ -131,7 +131,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           {/* Card 1: Curriculum Vitae */}
           <div
             id="home-card-cv"
-            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[#2563eb]"
+            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[var(--color-link)]"
           >
             {/* CV Document Icon */}
             <svg
@@ -141,7 +141,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
               xmlns="http://www.w3.org/2000/svg"
             >
               <rect x="5" y="3" width="22" height="26" rx="2" fill="#ffffff" stroke="#bfdbfe" strokeWidth="1.5" />
-              <circle cx="16" cy="11" r="4.5" fill="#2563eb" />
+              <circle cx="16" cy="11" r="4.5" fill="var(--color-link)" />
               <text x="16" y="13" textAnchor="middle" fill="#ffffff" fontSize="6" fontWeight="bold" fontFamily="sans-serif">CV</text>
               <line x1="9" y1="18" x2="23" y2="18" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" />
               <line x1="9" y1="21.5" x2="23" y2="21.5" stroke="#94a3b8" strokeWidth="1.5" strokeLinecap="round" />
@@ -155,28 +155,28 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
               </p>
               <ul className="space-y-1.5 pt-3 text-xs sm:text-[13px]">
                 <li className="flex items-center gap-1.5">
-                  <span className="text-[#2563eb] font-bold">»</span>
+                  <span className="text-[var(--color-link)] font-bold">»</span>
                   <button
                     onClick={() => onSelectTab('cv')}
-                    className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                    className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                   >
                     View in HTML format
                   </button>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <span className="text-[#2563eb] font-bold">»</span>
+                  <span className="text-[var(--color-link)] font-bold">»</span>
                   <button
                     onClick={() => onSelectTab('cv')}
-                    className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                    className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                   >
                     Download Microsoft Word version
                   </button>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <span className="text-[#2563eb] font-bold">»</span>
+                  <span className="text-[var(--color-link)] font-bold">»</span>
                   <button
                     onClick={() => onSelectTab('cv')}
-                    className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                    className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                   >
                     Download PDF version
                   </button>
@@ -188,7 +188,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           {/* Card 2: Online portfolio */}
           <div
             id="home-card-portfolio"
-            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[#2563eb]"
+            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[var(--color-link)]"
           >
             {/* Online Portfolio Window Icon */}
             <svg
@@ -203,9 +203,9 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
               <circle cx="10.5" cy="7" r="1" fill="#f7df1e" />
               <circle cx="14" cy="7" r="1" fill="#06b6d4" />
               <rect x="5" y="11" width="22" height="15" rx="1.5" fill="#ffffff" />
-              <circle cx="10.5" cy="16" r="3" stroke="#2563eb" strokeWidth="1.5" fill="none" strokeDasharray="14 5" />
+              <circle cx="10.5" cy="16" r="3" stroke="var(--color-link)" strokeWidth="1.5" fill="none" strokeDasharray="14 5" />
               <circle cx="10.5" cy="16" r="1" fill="#f7df1e" />
-              <rect x="16" y="14" width="2" height="5" rx="0.5" fill="#2563eb" />
+              <rect x="16" y="14" width="2" height="5" rx="0.5" fill="var(--color-link)" />
               <rect x="19" y="12" width="2" height="7" rx="0.5" fill="#06b6d4" />
               <rect x="22" y="15" width="2" height="4" rx="0.5" fill="#f7df1e" />
               <rect x="7" y="21.5" width="8" height="2" rx="0.5" fill="#cbd5e1" />
@@ -218,10 +218,10 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
                 My online portfolio showcases production web applications, client portals, and interactive 3D web experiences built over my <strong>3+</strong> years of commercial development.
               </p>
               <div className="pt-3 text-xs sm:text-[13px] flex items-center gap-1.5">
-                <span className="text-[#2563eb] font-bold">»</span>
+                <span className="text-[var(--color-link)] font-bold">»</span>
                 <button
                   onClick={() => onSelectTab('portfolio')}
-                  className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                  className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                 >
                   View my online portfolio
                 </button>
@@ -232,7 +232,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           {/* Card 3: LinkedIn recommendations */}
           <div
             id="home-card-recommendations"
-            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[#2563eb]"
+            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[var(--color-link)]"
           >
             {/* LinkedIn Solid Blue Icon */}
             <svg
@@ -254,10 +254,10 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
                 Throughout my career, I've been fortunate to work with talented engineers, technical leads, and founders who have kindly provided recommendations of my technical abilities and problem-solving mindset.
               </p>
               <div className="pt-3 text-xs sm:text-[13px] flex items-center gap-1.5">
-                <span className="text-[#2563eb] font-bold">»</span>
+                <span className="text-[var(--color-link)] font-bold">»</span>
                 <button
                   onClick={() => onSelectTab('recommendations')}
-                  className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                  className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                 >
                   View my LinkedIn recommendations
                 </button>
@@ -268,7 +268,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           {/* Card 4: Code samples */}
           <div
             id="home-card-code-samples"
-            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[#2563eb]"
+            className="p-5 sm:p-6 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs flex items-start gap-4 transition-all hover:border-[var(--color-link)]"
           >
             {/* GitHub Round Icon */}
             <svg
@@ -293,19 +293,19 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
               </p>
               <ul className="space-y-1.5 pt-3 text-xs sm:text-[13px]">
                 <li className="flex items-center gap-1.5">
-                  <span className="text-[#2563eb] font-bold">»</span>
+                  <span className="text-[var(--color-link)] font-bold">»</span>
                   <button
                     onClick={() => onSelectTab('code-samples')}
-                    className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                    className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                   >
                     View my code samples by contract / project
                   </button>
                 </li>
                 <li className="flex items-center gap-1.5">
-                  <span className="text-[#2563eb] font-bold">»</span>
+                  <span className="text-[var(--color-link)] font-bold">»</span>
                   <button
                     onClick={() => onSelectTab('code-samples')}
-                    className="text-[#2563eb] hover:underline cursor-pointer text-left font-semibold"
+                    className="text-[var(--color-link)] hover:underline cursor-pointer text-left font-semibold"
                   >
                     View my code samples by programming language
                   </button>

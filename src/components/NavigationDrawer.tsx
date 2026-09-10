@@ -101,7 +101,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
       {/* Drawer Panel */}
       <div
         id="navigation-drawer-panel"
-        className="relative w-full max-w-md bg-[var(--bg-surface)] text-[var(--text-main)] shadow-2xl flex flex-col h-full z-10 border-r border-[var(--border-subtle)] overflow-y-auto"
+        className="relative w-full max-w-md bg-[#f8fafc] text-[var(--text-main)] shadow-2xl flex flex-col h-full z-10 border-r border-slate-200 overflow-y-auto"
       >
         {/* Drawer Header */}
         <div className="p-6 border-b border-[var(--border-subtle)] bg-[var(--bg-header)] text-white flex items-center justify-between">
@@ -144,7 +144,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                   className={`w-full text-left p-3.5 rounded-xl transition-all flex items-center justify-between border ${
                     isActive
                       ? 'bg-[#eff6ff] border-[#2563eb] text-[#2563eb] font-bold shadow-xs'
-                      : 'hover:bg-[var(--bg-surface-elevated)] border-transparent text-[var(--text-main)]'
+                      : 'hover:bg-slate-200 border-transparent text-[var(--text-main)]'
                   }`}
                 >
                   <div className="flex items-center gap-3.5">
@@ -152,10 +152,10 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                       className={`p-2 rounded-lg ${
                         isActive
                           ? 'bg-[#2563eb] text-white'
-                          : 'bg-[var(--bg-surface-elevated)] text-[var(--text-muted)]'
+                          : 'bg-slate-200 text-[var(--text-muted)]'
                       }`}
                     >
-                      {React.cloneElement(item.icon as React.ReactElement, {
+                      {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, {
                         className: `w-5 h-5 ${isActive ? 'text-white' : 'text-[#2563eb]'}`
                       })}
                     </div>
@@ -190,7 +190,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
               <a
                 id="drawer-contact-email"
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[var(--bg-surface-elevated)] text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium truncate">{PERSONAL_INFO.email}</span>
@@ -198,7 +198,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
               <a
                 id="drawer-contact-phone"
                 href={`tel:${PERSONAL_INFO.phone}`}
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[var(--bg-surface-elevated)] text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium">{PERSONAL_INFO.phone}</span>
@@ -208,7 +208,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 href={PERSONAL_INFO.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[var(--bg-surface-elevated)] text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
               >
                 <Globe className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium truncate">{PERSONAL_INFO.website}</span>
@@ -219,7 +219,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[var(--bg-surface-elevated)] text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
               >
                 <Linkedin className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium">LinkedIn Profile</span>
@@ -230,7 +230,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-[var(--bg-surface-elevated)] text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
               >
                 <Github className="w-4 h-4 text-[var(--text-main)]" />
                 <span className="font-medium">GitHub Code Repositories</span>
@@ -241,7 +241,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
         </div>
 
         {/* Drawer Footer */}
-        <div className="p-5 border-t border-[var(--border-subtle)] bg-[var(--bg-surface-elevated)] flex items-center justify-between">
+        <div className="p-5 border-t border-slate-200 bg-slate-100 flex items-center justify-between">
           <div className="text-xs text-[var(--text-muted)]">
             Location: <span className="font-medium text-[var(--text-main)]">{PERSONAL_INFO.location}</span>
           </div>

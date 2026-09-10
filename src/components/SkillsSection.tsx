@@ -383,7 +383,7 @@ export const SkillsSection: React.FC = () => {
       {/* Outer Cohesive Surface matching blueprint layout */}
       <div
         id="skills-matrix-card"
-        className="p-5 sm:p-7 md:p-8 rounded-xl bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)] shadow-2xs transition-all"
+        className="p-5 sm:p-7 md:p-8 rounded-none sm:rounded-xl bg-white/20 border border-white/40 shadow-sm transition-all backdrop-blur-sm"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           {/* =========================================================================
@@ -391,8 +391,8 @@ export const SkillsSection: React.FC = () => {
              ========================================================================= */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <h3 className="text-base sm:text-lg font-bold text-[var(--text-main)] mb-5 tracking-tight">
-                Currently coding with (Present)
+              <h3 className="text-base sm:text-[15px] font-bold text-[var(--text-main)] mb-5 tracking-tight">
+                Currently coding with (as of August 2026)
               </h3>
 
               {/* Chart Body with Vertical Grid Lines */}
@@ -497,11 +497,11 @@ export const SkillsSection: React.FC = () => {
                 {COLUMN_1_SKILLS.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white border border-[#cbd5e1] hover:border-[#3178c6] shadow-2xs hover:shadow-xs transition-all group cursor-default"
+                    className="flex items-center gap-3 py-1.5 transition-all group cursor-default"
                     title={`${item.name} (${item.category})`}
                   >
                     {item.icon}
-                    <span className="font-medium text-[#1e293b] text-xs transition-colors truncate">
+                    <span className="font-medium text-[#475569] text-sm group-hover:text-[#0284c7] transition-colors truncate">
                       {item.name}
                     </span>
                   </div>
@@ -513,11 +513,11 @@ export const SkillsSection: React.FC = () => {
                 {COLUMN_2_SKILLS.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white border border-[#cbd5e1] hover:border-[#3178c6] shadow-2xs hover:shadow-xs transition-all group cursor-default"
+                    className="flex items-center gap-3 py-1.5 transition-all group cursor-default"
                     title={`${item.name} (${item.category})`}
                   >
                     {item.icon}
-                    <span className="font-medium text-[#1e293b] text-xs transition-colors truncate">
+                    <span className="font-medium text-[#475569] text-sm group-hover:text-[#0284c7] transition-colors truncate">
                       {item.name}
                     </span>
                   </div>
@@ -529,11 +529,11 @@ export const SkillsSection: React.FC = () => {
                 {COLUMN_3_SKILLS.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white border border-[#cbd5e1] hover:border-[#3178c6] shadow-2xs hover:shadow-xs transition-all group cursor-default"
+                    className="flex items-center gap-3 py-1.5 transition-all group cursor-default"
                     title={`${item.name} (${item.category})`}
                   >
                     {item.icon}
-                    <span className="font-medium text-[#1e293b] text-xs transition-colors truncate">
+                    <span className="font-medium text-[#475569] text-sm group-hover:text-[#0284c7] transition-colors truncate">
                       {item.name}
                     </span>
                   </div>
@@ -545,11 +545,11 @@ export const SkillsSection: React.FC = () => {
                 {COLUMN_4_SKILLS.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white border border-[#cbd5e1] hover:border-[#3178c6] shadow-2xs hover:shadow-xs transition-all group cursor-default"
+                    className="flex items-center gap-3 py-1.5 transition-all group cursor-default"
                     title={`${item.name} (${item.category})`}
                   >
                     {item.icon}
-                    <span className="font-medium text-[#1e293b] text-xs transition-colors truncate">
+                    <span className="font-medium text-[#475569] text-sm group-hover:text-[#0284c7] transition-colors truncate">
                       {item.name}
                     </span>
                   </div>

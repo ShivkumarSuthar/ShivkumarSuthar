@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-page: #a5d3f2;               /* Light Blue Background */
+    --bg-surface: transparent;        /* Transparent Surface */
+    --bg-header: #1b5380;             /* Dark Blue Header (#1b5380 approx) */
+    --header-text: #ffffff;           /* White Header Text */
+    --header-subtext: #e0f2fe;        /* Light blue Header Subtext */
+    --text-main: #334155;             /* Slate-700 Text (Little black) */
+    --text-muted: #475569;            /* Slate-600 Text */
+    --color-link: #0ea5e9;            /* Sky-500 for links */
+    --bg-surface-elevated: rgba(255, 255, 255, 0.4); /* Less opaque white for nested cards */
+    --border-subtle: rgba(255, 255, 255, 0.5); /* Subtle white border */
+    --font-sans: var(--font-quicksand), system-ui, sans-serif;
+  }
+
+  body {
+    background-color: var(--bg-page);
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+    background-size: 30px 30px;
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Martin Burford signature chevron animation */
+.chevron-hover-target:hover .chevron-arrow {
+  transform: translateX(4px);
+}

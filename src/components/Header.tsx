@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       id="main-header"
-      className="w-full transition-colors duration-200 border-b border-black/15 shadow-xs"
+      className="w-full transition-colors duration-200 shadow-sm"
       style={{
         backgroundColor: 'var(--bg-header)',
       }}
@@ -30,12 +30,12 @@ export const Header: React.FC<HeaderProps> = ({
             id="menu-toggle-button"
             onClick={onToggleMenu}
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className="p-1.5 sm:p-2 rounded-md text-black hover:bg-black/10 transition-colors focus:outline-none focus:ring-2 focus:ring-black/20"
+            className="p-1.5 sm:p-2 rounded-md text-white hover:bg-white/10 transition-colors focus:outline-none"
           >
             <div className="w-6 h-4 sm:w-7 sm:h-5 flex flex-col justify-between py-0.5">
-              <span className="w-full h-[2.5px] bg-black rounded-full"></span>
-              <span className="w-full h-[2.5px] bg-black rounded-full"></span>
-              <span className="w-full h-[2.5px] bg-black rounded-full"></span>
+              <span className="w-full h-[2px] bg-white rounded-full"></span>
+              <span className="w-full h-[2px] bg-white rounded-full"></span>
+              <span className="w-full h-[2px] bg-white rounded-full"></span>
             </div>
           </button>
 
@@ -44,14 +44,11 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => onSelectTab('home')}
             className="text-left group cursor-pointer focus:outline-none flex items-center gap-2.5 sm:gap-3"
           >
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-md bg-black text-[#f7df1e] font-mono font-black text-xs sm:text-sm flex items-center justify-center shrink-0 shadow-2xs group-hover:scale-105 transition-transform">
-              JS
-            </div>
             <div>
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-black leading-tight">
+              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
                 {PERSONAL_INFO.name}
               </h1>
-              <p className="text-xs sm:text-sm font-semibold text-neutral-800 tracking-wide leading-snug">
+              <p className="text-xs sm:text-sm font-medium text-blue-100 tracking-wide leading-snug">
                 {PERSONAL_INFO.title}
               </p>
             </div>
