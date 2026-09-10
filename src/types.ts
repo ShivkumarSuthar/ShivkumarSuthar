@@ -1,72 +1,64 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
+export type TabType = 'home' | 'cv' | 'portfolio' | 'recommendations' | 'code-samples';
 
-export interface Personal {
+export interface SkillItem {
+  id: string;
   name: string;
-  role: string;
-  bio: string;
-  location: string;
-  email: string;
-  phone: string;
-  github: string;
-  linkedin: string;
-  twitter: string;
-  avatar: string;
-  resume?: string;
+  category: 'core' | 'frontend' | 'backend' | 'state' | 'database' | 'devops' | 'tools';
+  isCurrentPrimary?: boolean;
+  yearsOrDepth?: string;
+  description?: string;
 }
 
-export interface Experience {
+export interface ExperienceItem {
   id: string;
   role: string;
   company: string;
+  location: string;
   period: string;
-  description: string;
+  isCurrent?: boolean;
+  type: 'Full-time' | 'Contract' | 'Client Engagement';
+  badgeText?: string;
+  overview: string;
+  responsibilities: string[];
+  techStack: string[];
+  projectLink?: string;
 }
 
-export interface Project {
+export interface ProjectItem {
   id: string;
   title: string;
-  description: string;
-  tags: string[];
-  link: string;
-  image: string;
+  subtitle: string;
+  category: 'Full-Stack' | 'Frontend & 3D' | 'Enterprise & Tools' | 'Personal';
+  timeframe: string;
+  status: 'Production' | 'Live' | 'In Progress';
+  overview: string;
+  problemStatement?: string;
+  solution?: string;
+  keyFeatures: string[];
+  techStack: string[];
+  liveUrl?: string;
+  githubUrl?: string;
+  metrics?: string[];
+  clientOrOrg?: string;
 }
 
-export interface Skill {
-  category: string;
-  list: string[];
-}
-
-export type ThemeType = 'slate' | 'amber' | 'emerald' | 'indigo' | 'rose';
-
-export interface ThemeColors {
-  bg: string;
-  text: string;
-  heading: string;
-  primary: string;
-  primaryHover: string;
-  accent: string;
-  cardBg: string;
-  borderColor: string;
-  badgeBg: string;
-  badgeText: string;
-}
-
-export interface PortfolioData {
-  personal: Personal;
-  experiences: Experience[];
-  projects: Project[];
-  skills: Skill[];
-  theme: ThemeType;
-  themeMode?: 'light' | 'dark';
-}
-
-export interface ContactMessage {
+export interface RecommendationItem {
   id: string;
-  name: string;
-  email: string;
-  message: string;
-  timestamp: string;
+  author: string;
+  role: string;
+  company: string;
+  relationship: string;
+  date: string;
+  testimonial: string;
+  avatarInitials: string;
+}
+
+export interface CodeSampleItem {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  language: string;
+  code: string;
+  takeaways: string[];
 }

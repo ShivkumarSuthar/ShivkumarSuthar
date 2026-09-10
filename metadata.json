@@ -1,8 +1,6 @@
 {
-  "name": "Personal Portfolio",
-  "description": "A highly polished, responsive personal portfolio built with React, Tailwind CSS, and elegant micro-animations.",
+  "name": "Shivkumar Suthar - Full-Stack Developer Portfolio",
+  "description": "Portfolio and Curriculum Vitae of Shivkumar Suthar, Full-Stack Developer with 3+ years experience building scalable web applications with React, Next.js, TypeScript, and Node.js.",
   "requestFramePermissions": [],
-  "majorCapabilities": [
-    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
-  ]
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
