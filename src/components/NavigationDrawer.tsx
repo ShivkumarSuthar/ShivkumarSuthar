@@ -7,6 +7,7 @@ import {
   Briefcase,
   ThumbsUp,
   Code2,
+  GraduationCap,
   Mail,
   Phone,
   Linkedin,
@@ -87,24 +88,30 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
       icon: <Code2 className="w-5 h-5 text-[#2563eb]" />,
       description: 'Architecture patterns in Next.js, GSAP & TanStack',
     },
+    {
+      tab: 'study',
+      label: 'Study',
+      icon: <GraduationCap className="w-5 h-5 text-[#2563eb]" />,
+      description: 'Courses, progress tracking & code practice',
+    },
   ];
 
   return (
-    <div className="fixed inset-0 z-50 flex">
+    <div className="fixed inset-0 z-[60] flex">
       {/* Backdrop */}
       <div
         id="drawer-backdrop"
         onClick={onClose}
-        className="fixed inset-0 bg-slate-900/40 backdrop-blur-xs transition-opacity duration-300"
+        className="fixed inset-0 bg-[#da7b5a]/40 backdrop-blur-xs transition-opacity duration-300"
       />
 
       {/* Drawer Panel */}
       <div
         id="navigation-drawer-panel"
-        className="relative w-full max-w-md bg-[#f8fafc] text-[var(--text-main)] shadow-2xl flex flex-col h-full z-10 border-r border-slate-200 overflow-y-auto"
+        className="relative w-full max-w-md bg-[#f8fafc] text-[var(--text-main)] shadow-2xl flex flex-col h-full z-10 border-r border-zinc-200 overflow-y-auto"
       >
         {/* Drawer Header */}
-        <div className="p-6 border-b border-[var(--border-subtle)] bg-[var(--bg-header)] text-white flex items-center justify-between">
+        <div className="p-6 border-b border-[var(--border-subtle)] bg-[var(--bg-header)] text-[#1f1f1f] flex items-center justify-between">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="w-2.5 h-2.5 rounded-full bg-[#38bdf8] pulse-dot"></span>
@@ -112,16 +119,16 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 Available for work
               </span>
             </div>
-            <h2 className="text-xl font-bold tracking-tight text-white">{PERSONAL_INFO.name}</h2>
+            <h2 className="text-xl font-bold tracking-tight text-[#1f1f1f]">{PERSONAL_INFO.name}</h2>
             <p className="text-xs text-[#94a3b8]">{PERSONAL_INFO.title} • 3+ Years Exp</p>
           </div>
           <button
             id="drawer-close-button"
             onClick={onClose}
             aria-label="Close navigation"
-            className="p-2 rounded-lg text-white hover:bg-white/10 transition-colors"
+            className="p-2 rounded-lg text-[#1f1f1f] hover:bg-black/5 transition-colors"
           >
-            <X className="w-6 h-6 text-white" />
+            <X className="w-6 h-6 text-[#1f1f1f]" />
           </button>
         </div>
 
@@ -144,26 +151,26 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                   className={`w-full text-left p-3.5 rounded-xl transition-all flex items-center justify-between border ${
                     isActive
                       ? 'bg-[#eff6ff] border-[#2563eb] text-[#2563eb] font-bold shadow-xs'
-                      : 'hover:bg-slate-200 border-transparent text-[var(--text-main)]'
+                      : 'hover:bg-zinc-200 border-transparent text-[var(--text-main)]'
                   }`}
                 >
                   <div className="flex items-center gap-3.5">
                     <div
                       className={`p-2 rounded-lg ${
                         isActive
-                          ? 'bg-[#2563eb] text-white'
-                          : 'bg-slate-200 text-[var(--text-muted)]'
+                          ? 'bg-[#2563eb] text-[#1f1f1f]'
+                          : 'bg-zinc-200 text-[var(--text-muted)]'
                       }`}
                     >
                       {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, {
-                        className: `w-5 h-5 ${isActive ? 'text-white' : 'text-[#2563eb]'}`
+                        className: `w-5 h-5 ${isActive ? 'text-[#1f1f1f]' : 'text-[#2563eb]'}`
                       })}
                     </div>
                     <div>
                       <div className="text-sm font-semibold flex items-center gap-2">
                         {item.label}
                         {isActive && (
-                          <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-[#2563eb] text-white font-bold">
+                          <span className="text-[10px] uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-[#2563eb] text-[#1f1f1f] font-bold">
                             Active
                           </span>
                         )}
@@ -173,7 +180,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                   </div>
                   <ChevronRight
                     className={`w-4 h-4 transition-transform ${
-                      isActive ? 'text-[#2563eb] translate-x-1' : 'text-[var(--text-subtle)]'
+                      isActive ? 'text-[#2563eb] tranzinc-x-1' : 'text-[var(--text-subtle)]'
                     }`}
                   />
                 </button>
@@ -190,7 +197,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
               <a
                 id="drawer-contact-email"
                 href={`mailto:${PERSONAL_INFO.email}`}
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-zinc-200 text-[var(--text-main)] transition-colors"
               >
                 <Mail className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium truncate">{PERSONAL_INFO.email}</span>
@@ -198,7 +205,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
               <a
                 id="drawer-contact-phone"
                 href={`tel:${PERSONAL_INFO.phone}`}
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-zinc-200 text-[var(--text-main)] transition-colors"
               >
                 <Phone className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium">{PERSONAL_INFO.phone}</span>
@@ -208,7 +215,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 href={PERSONAL_INFO.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-zinc-200 text-[var(--text-main)] transition-colors"
               >
                 <Globe className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium truncate">{PERSONAL_INFO.website}</span>
@@ -219,7 +226,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-zinc-200 text-[var(--text-main)] transition-colors"
               >
                 <Linkedin className="w-4 h-4 text-[#2563eb]" />
                 <span className="font-medium">LinkedIn Profile</span>
@@ -230,7 +237,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-slate-200 text-[var(--text-main)] transition-colors"
+                className="flex items-center gap-3 p-2.5 rounded-lg hover:bg-zinc-200 text-[var(--text-main)] transition-colors"
               >
                 <Github className="w-4 h-4 text-[var(--text-main)]" />
                 <span className="font-medium">GitHub Code Repositories</span>
@@ -241,7 +248,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
         </div>
 
         {/* Drawer Footer */}
-        <div className="p-5 border-t border-slate-200 bg-slate-100 flex items-center justify-between">
+        <div className="p-5 border-t border-zinc-200 bg-zinc-100 flex items-center justify-between">
           <div className="text-xs text-[var(--text-muted)]">
             Location: <span className="font-medium text-[var(--text-main)]">{PERSONAL_INFO.location}</span>
           </div>

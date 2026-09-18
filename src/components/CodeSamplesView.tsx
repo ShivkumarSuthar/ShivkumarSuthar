@@ -19,7 +19,7 @@ export const CodeSamplesView: React.FC = () => {
       {/* Intro */}
       <div className="space-y-3 border-b border-[var(--border-subtle)] pb-6">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-md bg-[#2563eb]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#1f1f1f] px-2 py-0.5 rounded-md bg-[#2563eb]">
             Source & Architecture
           </span>
           <span className="text-xs text-[var(--text-subtle)]">• Production Snippets</span>
@@ -39,7 +39,7 @@ export const CodeSamplesView: React.FC = () => {
               onClick={() => setSelectedSampleId(sample.id)}
               className={`px-3.5 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all border ${
                 selectedSampleId === sample.id
-                  ? 'bg-[#2563eb] text-white border-[#2563eb] shadow-xs'
+                  ? 'bg-[#2563eb] text-[#1f1f1f] border-[#2563eb] shadow-xs'
                   : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:bg-[var(--bg-surface-elevated)] border-[var(--border-subtle)]'
               }`}
             >

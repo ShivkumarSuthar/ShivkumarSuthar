@@ -5,125 +5,112 @@
 
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { TabType, ProjectItem } from '../types';
-import { Header } from '../components/Header';
-import { NavigationDrawer } from '../components/NavigationDrawer';
-import { HomeView } from '../components/HomeView';
-import { PortfolioView } from '../components/PortfolioView';
-import { CvView } from '../components/CvView';
-import { RecommendationsView } from '../components/RecommendationsView';
-import { CodeSamplesView } from '../components/CodeSamplesView';
-import { ProjectModal } from '../components/ProjectModal';
-import { Footer } from '../components/Footer';
-import { AnimatePresence, motion } from 'motion/react';
-import { ChevronRight, Home as HomeIcon } from 'lucide-react';
+import React, { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { TabType, ProjectItem } from "../types";
+import { SiteShell } from "../components/SiteShell";
+import { HomeView } from "../components/HomeView";
+import { PortfolioView } from "../components/PortfolioView";
+import { CvView } from "../components/CvView";
+import { RecommendationsView } from "../components/RecommendationsView";
+import { CodeSamplesView } from "../components/CodeSamplesView";
+import { ProjectModal } from "../components/ProjectModal";
+import { AnimatePresence, motion } from "motion/react";
 
-export default function App() {
-  const [currentTab, setCurrentTab] = useState<TabType>('home');
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const VALID_TABS: TabType[] = [
+  "home",
+  "cv",
+  "portfolio",
+  "recommendations",
+  "code-samples",
+  "study",
+];
+
+function parseTab(value: string | null): TabType {
+  if (value && VALID_TABS.includes(value as TabType) && value !== "study") {
+    return value as TabType;
+  }
+  return "home";
+}
+
+function PortfolioApp() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const [currentTab, setCurrentTab] = useState<TabType>(() =>
+    parseTab(searchParams.get("tab")),
+  );
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
-  // Permanently maintain bright, clean light theme
   useEffect(() => {
     const root = document.documentElement;
-    root.removeAttribute('data-theme');
-    localStorage.setItem('shivkumar_theme', 'light');
+    root.removeAttribute("data-theme");
+    localStorage.setItem("shivkumar_theme", "light");
   }, []);
 
-  const handleSelectTab = (tab: TabType) => {
-    setCurrentTab(tab);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  useEffect(() => {
+    setCurrentTab(parseTab(searchParams.get("tab")));
+  }, [searchParams]);
 
-  const getBreadcrumbTitle = (tab: TabType) => {
-    switch (tab) {
-      case 'home':
-        return 'Home';
-      case 'cv':
-        return 'Curriculum Vitae';
-      case 'portfolio':
-        return 'Portfolio';
-      case 'recommendations':
-        return 'Recommendations';
-      case 'code-samples':
-        return 'Code Samples';
-      default:
-        return 'Home';
+  const handleSelectTab = (tab: TabType) => {
+    if (tab === "study") {
+      router.push("/study");
+      return;
     }
+    setCurrentTab(tab);
+    const href = tab === "home" ? "/" : `/?tab=${tab}`;
+    router.replace(href, { scroll: false });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="min-h-screen flex flex-col  px-2.5 sm:px-6 lg:px-8 selection:bg-[#f7df1e] selection:text-black">
-      {/* Slide-over Navigation Drawer */}
-      <NavigationDrawer
-        isOpen={isMenuOpen}
-        onClose={() => setIsMenuOpen(false)}
-        currentTab={currentTab}
-        onSelectTab={handleSelectTab}
-      />
+    <>
+      <SiteShell currentTab={currentTab} onSelectTab={handleSelectTab}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentTab}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2 }}
+          >
+            {currentTab === "home" && (
+              <HomeView
+                onSelectTab={handleSelectTab}
+                onOpenProjectModal={(project) => setSelectedProject(project)}
+              />
+            )}
+            {currentTab === "portfolio" && (
+              <PortfolioView
+                onOpenProjectModal={(project) => setSelectedProject(project)}
+              />
+            )}
+            {currentTab === "cv" && (
+              <CvView onBackToHome={() => handleSelectTab("home")} />
+            )}
+            {currentTab === "recommendations" && <RecommendationsView />}
+            {currentTab === "code-samples" && <CodeSamplesView />}
+          </motion.div>
+        </AnimatePresence>
+      </SiteShell>
 
-      {/* Unified Single Card: Header and Content aligned together */}
-      <div
-        id="app-main-card"
-        className="max-w-7xl w-full mx-auto overflow-hidden shadow-2xl flex flex-col bg-white/40 backdrop-blur-sm"
-        style={{
-          boxShadow: '0 20px 45px -15px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-        }}
-      >
-        {/* 1. Header (Top of the Card) */}
-        <Header
-          currentTab={currentTab}
-          onSelectTab={handleSelectTab}
-          isMenuOpen={isMenuOpen}
-          onToggleMenu={() => setIsMenuOpen((prev) => !prev)}
-        />
-
-        {/* 2. Main Content Canvas (Body of the Card) */}
-        <main
-          id="main-content"
-          className="flex-1 w-full text-[var(--text-main)]"
-          style={{
-            padding: '30px',
-          }}
-        >
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentTab}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
-            >
-              {currentTab === 'home' && (
-                <HomeView
-                  onSelectTab={handleSelectTab}
-                  onOpenProjectModal={(project) => setSelectedProject(project)}
-                />
-              )}
-              {currentTab === 'portfolio' && (
-                <PortfolioView
-                  onOpenProjectModal={(project) => setSelectedProject(project)}
-                />
-              )}
-              {currentTab === 'cv' && (
-                <CvView onBackToHome={() => handleSelectTab('home')} />
-              )}
-              {currentTab === 'recommendations' && <RecommendationsView />}
-              {currentTab === 'code-samples' && <CodeSamplesView />}
-            </motion.div>
-          </AnimatePresence>
-        </main>
-
-        {/* 3. Footer (Bottom of the Card - rendered on secondary pages) */}
-        {currentTab !== 'home' && <Footer onSelectTab={handleSelectTab} />}
-      </div>
-
-      {/* 4. Project Case Study Modal */}
       <ProjectModal
         project={selectedProject}
         onClose={() => setSelectedProject(null)}
       />
-    </div>
+    </>
+  );
+}
+
+export default function App() {
+  return (
+    <Suspense
+      fallback={
+        <SiteShell currentTab="home" showFooter={false}>
+          <div className="h-40 animate-pulse rounded-xl bg-[#ffffff]/50" />
+        </SiteShell>
+      }
+    >
+      <PortfolioApp />
+    </Suspense>
   );
 }

@@ -9,6 +9,8 @@ interface HeaderProps {
   onToggleMenu: () => void;
 }
 
+const firstName = PERSONAL_INFO.name.split(/\s+/)[0] || PERSONAL_INFO.name;
+
 export const Header: React.FC<HeaderProps> = ({
   currentTab,
   onSelectTab,
@@ -18,45 +20,44 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header
       id="main-header"
-      className="w-full transition-colors duration-200 shadow-sm"
+      className="sticky top-0 z-50 w-full shadow-sm supports-[backdrop-filter]:backdrop-blur-md"
       style={{
-        backgroundColor: 'var(--bg-header)',
+        backgroundColor: "var(--bg-header)",
+        paddingTop: "env(safe-area-inset-top)",
       }}
     >
-      <div className="w-full px-5 sm:px-8 h-16 sm:h-18 flex items-center justify-between">
-        {/* Left: Hamburger menu + Name & Subtitle */}
-        <div className="flex items-center gap-3 sm:gap-4">
+      <div className="w-full px-4 sm:px-8 h-14 sm:h-[4.5rem] flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2.5 sm:gap-4 min-w-0">
           <button
             id="menu-toggle-button"
             onClick={onToggleMenu}
             aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-            className="p-1.5 sm:p-2 rounded-md text-white hover:bg-white/10 transition-colors focus:outline-none"
+            className="shrink-0 p-2 rounded-lg text-[#1f1f1f] hover:bg-black/5 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
           >
-            <div className="w-6 h-4 sm:w-7 sm:h-5 flex flex-col justify-between py-0.5">
-              <span className="w-full h-[2px] bg-white rounded-full"></span>
-              <span className="w-full h-[2px] bg-white rounded-full"></span>
-              <span className="w-full h-[2px] bg-white rounded-full"></span>
+            <div className="w-5 h-3.5 sm:w-6 sm:h-4 flex flex-col justify-between">
+              <span className="w-full h-[2px] bg-[#ffffff] rounded-full"></span>
+              <span className="w-full h-[2px] bg-[#ffffff] rounded-full"></span>
+              <span className="w-full h-[2px] bg-[#ffffff] rounded-full"></span>
             </div>
           </button>
 
           <button
             id="brand-home-link"
             onClick={() => onSelectTab('home')}
-            className="text-left group cursor-pointer focus:outline-none flex items-center gap-2.5 sm:gap-3"
+            className="text-left group cursor-pointer focus:outline-none min-w-0 focus-visible:ring-2 focus-visible:ring-white/40 rounded"
           >
-            <div>
-              <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
-                {PERSONAL_INFO.name}
-              </h1>
-              <p className="text-xs sm:text-sm font-medium text-blue-100 tracking-wide leading-snug">
-                {PERSONAL_INFO.title}
-              </p>
-            </div>
+            {/* Mobile: first name only. Desktop: full profile name + title */}
+            <h1 className="text-[1.125rem] sm:text-2xl font-bold tracking-tight text-[#1f1f1f] leading-none truncate">
+              <span className="sm:hidden">{firstName}</span>
+              <span className="hidden sm:inline">{PERSONAL_INFO.name}</span>
+            </h1>
+            <p className="hidden sm:block mt-0.5 text-sm font-medium text-[#1f1f1f] tracking-wide leading-snug truncate max-w-[22rem]">
+              {PERSONAL_INFO.title}
+            </p>
           </button>
         </div>
 
-        {/* Right: The 4 distinct icons from Martin Burford's header */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex items-center gap-0.5 sm:gap-2.5 shrink-0">
           {/* 1. CV Document Icon */}
           <button
             id="header-cv-icon"
@@ -64,11 +65,11 @@ export const Header: React.FC<HeaderProps> = ({
             title="Curriculum Vitae"
             aria-label="View Curriculum Vitae"
             className={`p-1 rounded-md transition-all hover:scale-105 active:scale-95 focus:outline-none ${
-              currentTab === 'cv' ? 'ring-2 ring-black/40 bg-black/15' : 'hover:bg-black/10'
+              currentTab === 'cv' ? 'ring-2 ring-black/40 bg-[#f3f1ec]/15' : 'hover:bg-[#f3f1ec]/10'
             }`}
           >
             <svg
-              className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-xs"
+              className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-xs"
               viewBox="0 0 32 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -102,11 +103,11 @@ export const Header: React.FC<HeaderProps> = ({
             title="Portfolio & Projects"
             aria-label="View Portfolio & Projects"
             className={`p-1 rounded-md transition-all hover:scale-105 active:scale-95 focus:outline-none ${
-              currentTab === 'portfolio' ? 'ring-2 ring-black/40 bg-black/15' : 'hover:bg-black/10'
+              currentTab === 'portfolio' ? 'ring-2 ring-black/40 bg-[#f3f1ec]/15' : 'hover:bg-[#f3f1ec]/10'
             }`}
           >
             <svg
-              className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-xs"
+              className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-xs"
               viewBox="0 0 32 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -142,10 +143,10 @@ export const Header: React.FC<HeaderProps> = ({
             rel="noopener noreferrer"
             title="LinkedIn Profile"
             aria-label="Visit LinkedIn Profile"
-            className="p-1 rounded-md transition-all hover:scale-105 active:scale-95 hover:bg-black/10 focus:outline-none"
+            className="p-1 rounded-md transition-all hover:scale-105 active:scale-95 hover:bg-[#f3f1ec]/10 focus:outline-none"
           >
             <svg
-              className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-xs"
+              className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-xs"
               viewBox="0 0 32 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -166,10 +167,10 @@ export const Header: React.FC<HeaderProps> = ({
             rel="noopener noreferrer"
             title="GitHub Profile"
             aria-label="Visit GitHub Profile"
-            className="p-1 rounded-md transition-all hover:scale-105 active:scale-95 hover:bg-black/10 focus:outline-none"
+            className="p-1 rounded-md transition-all hover:scale-105 active:scale-95 hover:bg-[#f3f1ec]/10 focus:outline-none"
           >
             <svg
-              className="w-7 h-7 sm:w-8 sm:h-8 drop-shadow-xs"
+              className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-xs"
               viewBox="0 0 32 32"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

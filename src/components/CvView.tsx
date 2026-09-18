@@ -38,7 +38,7 @@ export const CvView: React.FC<CvViewProps> = ({ onBackToHome }) => {
   const handleDownloadText = () => {
     const textContent = `
 ${PERSONAL_INFO.name.toUpperCase()}
-Full-Stack Developer
+${PERSONAL_INFO.title}
 Phone: ${PERSONAL_INFO.phone} | Email: ${PERSONAL_INFO.email}
 Website: ${PERSONAL_INFO.website} | LinkedIn: ${PERSONAL_INFO.linkedin}
 Location: ${PERSONAL_INFO.location}
@@ -66,7 +66,7 @@ TECHNICAL SKILLS
 EMPLOYMENT HISTORY
 ==================================================
 1. Dev Technosys Pvt Ltd. (Jaipur, Rajasthan) - May 2023 - Present
-   MERN STACK DEVELOPER
+   Full Stack Developer
    - Worked on the AIE South Africa web ecosystem for 2+ years.
    - Contributed to multiple production applications and primary website.
    - Responsible for debugging, root-cause analysis, and performance optimization.
@@ -128,9 +128,9 @@ KEY PROJECTS
 
           <button
             onClick={handlePrint}
-            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-white bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors shadow-xs"
+            className="flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-[#1f1f1f] bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors shadow-xs"
           >
-            <Printer className="w-3.5 h-3.5 text-white" />
+            <Printer className="w-3.5 h-3.5 text-[#1f1f1f]" />
             <span>Print / Save as PDF</span>
           </button>
         </div>
@@ -139,7 +139,7 @@ KEY PROJECTS
       {/* CV Paper Document (Matches Resume PDF content exactly) */}
       <div
         id="printable-cv-document"
-        className="cv-card p-6 sm:p-12 rounded-2xl border bg-white text-[#222220] shadow-sm max-w-4xl mx-auto space-y-8"
+        className="cv-card p-6 sm:p-12 rounded-2xl border bg-[#ffffff] text-[#222220] shadow-sm max-w-4xl mx-auto space-y-8"
         style={{
           borderColor: 'var(--border-subtle)',
         }}
@@ -241,7 +241,7 @@ KEY PROJECTS
                   ★ Dev Technosys Pvt Ltd. <span className="font-medium text-gray-500">(Jaipur, Rajasthan)</span>
                 </h3>
                 <div className="text-xs font-bold text-[#2563eb] uppercase tracking-wide">
-                  MERN STACK DEVELOPER
+                  Full Stack Developer
                 </div>
               </div>
               <div className="text-xs font-semibold text-gray-600 sm:text-right">

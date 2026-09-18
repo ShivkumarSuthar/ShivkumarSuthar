@@ -1,4 +1,4 @@
-export type TabType = 'home' | 'cv' | 'portfolio' | 'recommendations' | 'code-samples';
+export type TabType = 'home' | 'cv' | 'portfolio' | 'recommendations' | 'code-samples' | 'study';
 
 export interface SkillItem {
   id: string;

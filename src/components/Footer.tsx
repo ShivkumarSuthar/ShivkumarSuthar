@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
           <div>
             <h3 className="text-lg font-bold text-[var(--text-main)]">{PERSONAL_INFO.name}</h3>
             <p className="text-xs text-[var(--text-muted)] mt-0.5">
-              {PERSONAL_INFO.title} • Specializing in React, Next.js, and Full-Stack Engineering
+              {PERSONAL_INFO.title} · MongoDB, Express, React, Next.js & Node.js
             </p>
           </div>
 
@@ -56,6 +56,9 @@ export const Footer: React.FC<FooterProps> = ({ onSelectTab }) => {
             </button>
             <button onClick={() => onSelectTab('code-samples')} className="hover:text-[#2563eb] transition-colors">
               Code samples
+            </button>
+            <button onClick={() => onSelectTab('study')} className="hover:text-[#2563eb] transition-colors">
+              Study
             </button>
           </div>
 

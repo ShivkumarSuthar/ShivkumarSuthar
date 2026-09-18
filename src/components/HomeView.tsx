@@ -16,12 +16,12 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
       {/* 1. Availability Status Bar */}
       <div
         id="availability-banner"
-        className="w-full py-2.5 sm:py-3 px-4 rounded-md bg-[#10b981] text-white flex items-center justify-center gap-2.5 shadow-sm font-medium text-sm sm:text-base tracking-normal"
+        className="w-full py-2.5 sm:py-3 px-4 rounded-md bg-[#10b981] text-[#1f1f1f] flex items-center justify-center gap-2.5 shadow-sm font-medium text-sm sm:text-base tracking-normal"
       >
         <div className="w-5 h-5 rounded-full border-2 border-white flex items-center justify-center shrink-0 bg-transparent">
-          <Check className="w-3.5 h-3.5 text-white stroke-[3]" />
+          <Check className="w-3.5 h-3.5 text-[#1f1f1f] stroke-[3]" />
         </div>
-        <span>I'm currently available for work</span>
+        <span>I&apos;m currently available for work</span>
       </div>
 
       {/* 2. Introduction to Me */}
@@ -94,7 +94,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           >
             my most recent role
           </button>
-          {' '}at Dev Technosys Pvt Ltd (May 2024 – Present), I spearheaded core frontend modules and dynamic UI features for the AIE South Africa university portal using Next.js, React, and TypeScript. I engineered modular, reusable UI component libraries utilizing Tailwind CSS and TanStack Query, reducing redundant code and speeding up development cycles. I executed root-cause debugging and Core Web Vitals optimization, reducing page load latency and improving overall platform stability, while collaborating with backend engineers to integrate RESTful endpoints and ensure strict API contracts.
+          {' '}at Dev Technosys Pvt Ltd (May 2024 – Present) as a Full Stack Developer, I spearheaded core frontend modules and full-stack feature delivery for the AIE South Africa university portal using Next.js, React, TypeScript, Node.js, and REST APIs. I engineered modular UI libraries with Tailwind CSS and TanStack Query, optimized Core Web Vitals, and collaborated across the stack to integrate endpoints and keep production systems stable.
         </p>
 
         <p className="text-sm sm:text-[15px] text-[var(--text-muted)] font-normal pt-1">
@@ -106,7 +106,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
           {RECENT_ROLE_PILLS.map((pill) => (
             <div
               key={pill.id}
-              className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-white border border-[#cbd5e1] hover:border-[#3178c6] shadow-2xs hover:shadow-xs transition-all cursor-default"
+              className="inline-flex items-center gap-2.5 px-3 py-1.5 rounded-lg bg-[#ffffff] border border-[#cbd5e1] hover:border-[#3178c6] shadow-2xs hover:shadow-xs transition-all cursor-default"
             >
               {pill.icon}
               <span className="text-[13px] sm:text-sm font-medium text-[#1e293b] tracking-tight">
@@ -120,7 +120,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
       {/* 4. Skills Matrix Intro & Interactive Chart */}
       <section id="skills-matrix-wrapper" className="pt-2">
         <p className="text-sm sm:text-[15px] leading-relaxed text-[var(--text-muted)] font-normal mb-4">
-          Below is an illustration of some of the technologies I'm using at the moment, along with a few of the other technologies I've used in the past. This list is constantly growing, as the front-end landscape continues to change and evolve from one year to the next.
+          Below is an illustration of some of the technologies I&apos;m using at the moment, along with a few of the other technologies I&apos;ve used in the past. This list is constantly growing, as the front-end landscape continues to change and evolve from one year to the next.
         </p>
         <SkillsSection />
       </section>
@@ -251,7 +251,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
             <div className="flex-1 min-w-0">
               <h3 className="text-base font-bold text-[var(--text-main)] tracking-tight">LinkedIn recommendations</h3>
               <p className="text-xs sm:text-[13px] text-[var(--text-muted)] leading-relaxed mt-1">
-                Throughout my career, I've been fortunate to work with talented engineers, technical leads, and founders who have kindly provided recommendations of my technical abilities and problem-solving mindset.
+                Throughout my career, I&apos;ve been fortunate to work with talented engineers, technical leads, and founders who have kindly provided recommendations of my technical abilities and problem-solving mindset.
               </p>
               <div className="pt-3 text-xs sm:text-[13px] flex items-center gap-1.5">
                 <span className="text-[var(--color-link)] font-bold">»</span>
@@ -289,7 +289,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onSelectTab }) => {
             <div className="flex-1 min-w-0">
               <h3 className="text-base font-bold text-[var(--text-main)] tracking-tight">Code samples</h3>
               <p className="text-xs sm:text-[13px] text-[var(--text-muted)] leading-relaxed mt-1">
-                Whilst a number of the projects I work on are subject to NDAs, I've put together a reasonably large set of code within my GitHub profile, covering a wide range of technologies and project types.
+                Whilst a number of the projects I work on are subject to NDAs, I&apos;ve put together a reasonably large set of code within my GitHub profile, covering a wide range of technologies and project types.
               </p>
               <ul className="space-y-1.5 pt-3 text-xs sm:text-[13px]">
                 <li className="flex items-center gap-1.5">

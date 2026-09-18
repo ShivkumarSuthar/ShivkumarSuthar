@@ -34,7 +34,7 @@ export const PortfolioView: React.FC<PortfolioViewProps> = ({ onOpenProjectModal
       {/* Intro Header matching Martin Burford */}
       <div className="space-y-3 border-b border-[var(--border-subtle)] pb-6">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-md bg-[#2563eb]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#1f1f1f] px-2 py-0.5 rounded-md bg-[#2563eb]">
             Work Showcase
           </span>
           <span className="text-xs text-[var(--text-subtle)]">• 2022 to Present</span>
@@ -52,7 +52,7 @@ export const PortfolioView: React.FC<PortfolioViewProps> = ({ onOpenProjectModal
             onClick={() => setActiveTab('all')}
             className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'all'
-                ? 'bg-[#2563eb] text-white shadow-xs'
+                ? 'bg-[#2563eb] text-[#1f1f1f] shadow-xs'
                 : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)]'
             }`}
           >
@@ -62,7 +62,7 @@ export const PortfolioView: React.FC<PortfolioViewProps> = ({ onOpenProjectModal
             onClick={() => setActiveTab('fullstack')}
             className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'fullstack'
-                ? 'bg-[#2563eb] text-white shadow-xs'
+                ? 'bg-[#2563eb] text-[#1f1f1f] shadow-xs'
                 : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)]'
             }`}
           >
@@ -72,7 +72,7 @@ export const PortfolioView: React.FC<PortfolioViewProps> = ({ onOpenProjectModal
             onClick={() => setActiveTab('frontend3d')}
             className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'frontend3d'
-                ? 'bg-[#2563eb] text-white shadow-xs'
+                ? 'bg-[#2563eb] text-[#1f1f1f] shadow-xs'
                 : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)]'
             }`}
           >
@@ -82,7 +82,7 @@ export const PortfolioView: React.FC<PortfolioViewProps> = ({ onOpenProjectModal
             onClick={() => setActiveTab('enterprise')}
             className={`px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
               activeTab === 'enterprise'
-                ? 'bg-[#2563eb] text-white shadow-xs'
+                ? 'bg-[#2563eb] text-[#1f1f1f] shadow-xs'
                 : 'bg-[var(--bg-surface)] text-[var(--text-muted)] hover:bg-[var(--bg-surface-elevated)] border border-[var(--border-subtle)]'
             }`}
           >
@@ -108,7 +108,7 @@ export const PortfolioView: React.FC<PortfolioViewProps> = ({ onOpenProjectModal
             <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
               <div>
                 <div className="flex flex-wrap items-center gap-2 mb-1.5">
-                  <span className="text-xs font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-md bg-[#2563eb]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#1f1f1f] px-2 py-0.5 rounded-md bg-[#2563eb]">
                     {project.category}
                   </span>
                   <span className="text-xs font-semibold px-2 py-0.5 rounded-md bg-[#eff6ff] text-[#2563eb] border border-[#bfdbfe]">

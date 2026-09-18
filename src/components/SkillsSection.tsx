@@ -383,7 +383,7 @@ export const SkillsSection: React.FC = () => {
       {/* Outer Cohesive Surface matching blueprint layout */}
       <div
         id="skills-matrix-card"
-        className="p-5 sm:p-7 md:p-8 rounded-none sm:rounded-xl bg-white/20 border border-white/40 shadow-sm transition-all backdrop-blur-sm"
+        className="p-5 sm:p-7 md:p-8 rounded-none sm:rounded-xl bg-[#ffffff]/20 border border-white/40 shadow-sm transition-all backdrop-blur-sm"
       >
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
           {/* =========================================================================
@@ -434,7 +434,7 @@ export const SkillsSection: React.FC = () => {
                             }}
                           >
                             {isHovered && (
-                              <span className="text-[10px] font-bold text-white tracking-tight leading-none whitespace-nowrap drop-shadow-xs">
+                              <span className="text-[10px] font-bold text-[#1f1f1f] tracking-tight leading-none whitespace-nowrap drop-shadow-xs">
                                 {skill.years}y
                               </span>
                             )}

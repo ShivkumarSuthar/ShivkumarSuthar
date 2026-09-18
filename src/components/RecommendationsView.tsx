@@ -8,7 +8,7 @@ export const RecommendationsView: React.FC = () => {
       {/* Header matching Martin Burford */}
       <div className="space-y-3 border-b border-[var(--border-subtle)] pb-6">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold uppercase tracking-wider text-white px-2 py-0.5 rounded-md bg-[#2563eb]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#1f1f1f] px-2 py-0.5 rounded-md bg-[#2563eb]">
             Social Proof
           </span>
           <span className="text-xs text-[var(--text-subtle)]">• Colleague & Client Endorsements</span>
@@ -25,7 +25,7 @@ export const RecommendationsView: React.FC = () => {
             href={PERSONAL_INFO.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-white bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors shadow-xs"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold text-[#1f1f1f] bg-[#2563eb] hover:bg-[#1d4ed8] transition-colors shadow-xs"
           >
             <Linkedin className="w-3.5 h-3.5" />
             <span>Connect on LinkedIn</span>
@@ -49,7 +49,7 @@ export const RecommendationsView: React.FC = () => {
           >
             <div className="flex items-start justify-between gap-4">
               <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-[#2563eb] text-white flex items-center justify-center font-bold text-sm shadow-xs">
+                <div className="w-11 h-11 rounded-xl bg-[#2563eb] text-[#1f1f1f] flex items-center justify-center font-bold text-sm shadow-xs">
                   {rec.avatarInitials}
                 </div>
                 <div>

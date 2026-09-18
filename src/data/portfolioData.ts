@@ -2,7 +2,7 @@ import { ExperienceItem, ProjectItem, SkillItem, RecommendationItem, CodeSampleI
 
 export const PERSONAL_INFO = {
   name: 'Shivkumar Suthar',
-  title: 'Frontend Engineer • React.js / Next.js Specialist',
+  title: 'Full-Stack Engineer',
   experienceYears: '3+ years',
   location: 'Jaipur, India',
   email: 'suthar.developer@gmail.com',
@@ -12,14 +12,17 @@ export const PERSONAL_INFO = {
   github: 'https://github.com/shivkumarsuthar',
   availableForHire: true,
   availabilityText: "I'm currently available for work",
-  bioHeadline: "Frontend Engineer specializing in React.js, Next.js, and TypeScript",
-  bioParagraph1: "Frontend Developer with 3+ years of experience engineering high-performance, responsive web applications using React.js, Next.js, and TypeScript. Specialized in component-driven UI architecture, scalable state management (Zustand, TanStack Query, Redux Toolkit), and client-side performance optimization. Demonstrated track record of delivering end-to-end features, resolving critical production issues, and integrating robust REST APIs for enterprise-grade platforms.",
-  bioParagraph2: "Specialized in component-driven UI architecture, scalable state management, and client-side performance optimization. Proven track record of delivering end-to-end features, engineering modular component libraries with Tailwind CSS, and integrating robust RESTful APIs for enterprise platforms.",
+  bioHeadline:
+    'Full Stack Developer building full-stack apps with MongoDB, Express, React, Next.js, and Node.js',
+  bioParagraph1:
+    'Full-Stack Developer with 3+ years of commercial experience building scalable web applications end to end. Strong frontend foundation in React.js, Next.js, and TypeScript, with hands-on backend work in Node.js, Express.js, MongoDB, and MySQL. Delivering production features across the stack — UI architecture, REST APIs, state management (Zustand, TanStack Query, Redux Toolkit), and Core Web Vitals performance for enterprise platforms.',
+  bioParagraph2:
+    'Comfortable owning full product flows: component-driven UIs with Tailwind CSS, API design and integration, database-backed features, and production debugging. Proven delivery on MERN and Next.js systems for university portals, interior studio platforms, and interactive client products.',
   education: {
     degree: 'Bachelor of Science in Information Technology (B.Sc. IT)',
     institution: 'Mumbai University',
-    year: '2022'
-  }
+    year: '2022',
+  },
 };
 
 export const CURRENT_TECH_STACK: SkillItem[] = [
@@ -54,14 +57,14 @@ export const OTHER_TECH_STACK: SkillItem[] = [
 export const WORK_EXPERIENCE: ExperienceItem[] = [
   {
     id: 'dev-technosys',
-    role: 'Frontend / MERN Stack Developer',
+    role: 'Full Stack Developer',
     company: 'Dev Technosys Pvt Ltd',
     location: 'Jaipur, India',
     period: 'May 2024 – Present',
     isCurrent: true,
     type: 'Full-time',
-    badgeText: 'Current Role • Next.js & React.js',
-    overview: 'Spearheading core frontend architecture and dynamic UI modules for the high-traffic AIE South Africa university portal using Next.js, React, and TypeScript.',
+    badgeText: 'Current Role • MERN Stack',
+    overview: 'Spearheading MERN / full-stack delivery for the high-traffic AIE South Africa university portal — Next.js, React, TypeScript on the client, with Node.js APIs and data integration across the stack.',
     responsibilities: [
       'Spearheaded core frontend modules and dynamic UI features for the AIE South Africa university portal using Next.js, React, and TypeScript.',
       'Engineered modular, reusable UI component libraries utilizing Tailwind CSS and TanStack Query, reducing redundant code and speeding up development cycles.',
