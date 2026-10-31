@@ -1,122 +1,123 @@
-# Shivkumar Suthar — Portfolio & Study
+<!-- Header -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F5AF0,100:2CB67D&height=220&section=header&text=Shivkumar%20Suthar&fontSize=52&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Full-Stack%20Developer%20%E2%80%A2%20MERN%20%E2%80%A2%20Next.js&descAlignY=58&descSize=18" alt="Shivkumar Suthar" />
+</p>
 
-Personal portfolio for **Shivkumar Suthar** (MERN / Full-Stack), plus a **Study** workspace to save courses, track lesson progress, and practice JavaScript, React, and HTML/CSS in the browser.
+<p align="center">
+  <a href="https://shivkumarsuthar.vercel.app">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=7F5AF0&center=true&vCenter=true&width=600&lines=Full-Stack+Developer+%F0%9F%92%BB;MERN+%7C+Next.js+%7C+TypeScript;Exploring+3D+on+the+web+with+Three.js+%F0%9F%A7%8A;Building+from+Jaipur%2C+Rajasthan+%F0%9F%8F%9C%EF%B8%8F" alt="Typing SVG" />
+  </a>
+</p>
 
-**Live:** [shivkumar-suthar.vercel.app](https://shivkumar-suthar.vercel.app) (if deployed)
+<p align="center">
+  <a href="https://shivkumarsuthar.vercel.app"><img src="https://img.shields.io/badge/Portfolio-7F5AF0?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" /></a>
+  <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="mailto:YOUR_EMAIL"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
+  <img src="https://komarev.com/ghpvc/?username=ShivkumarSuthar&style=for-the-badge&color=2CB67D&label=Profile+Views" alt="Profile views" />
+</p>
 
-## Stack
+---
 
-- **Next.js 15** (App Router) + React 19 + TypeScript
-- **Tailwind CSS 4**
-- **Auth.js** (NextAuth v5) — email/password + optional Google / Facebook SSO
-- **MongoDB Atlas** (Mongoose) — users, courses, lessons, progress
-- **Sandpack** — in-browser code practice
+### 👨‍💻 About Me
 
-## Features
+- 🏢 Full-Stack Developer at **[@Viseven India](https://github.com/Viseven)**
+- ⚛️ I build web apps with **React, Next.js, Node.js & MongoDB**
+- 🧊 Currently exploring **3D on the web with Three.js**
+- 🌱 Learning more about **TypeScript, system design & clean architecture**
+- 📍 Based in **Jaipur, Rajasthan, India**
+- 🤝 Open to freelance work and collaborations
+- ⚡ Fun fact: I learn best by building, so most of my repos started as experiments
 
-| Area | What you get |
-|------|----------------|
-| Portfolio | Home, CV, projects, recommendations, code samples |
-| Study (`/study`) | Sign in, create courses, plan dates, mark lessons done |
-| Practice | JS / React / HTML–CSS playgrounds per lesson |
-| SEO | Metadata, sitemap, robots, Open Graph image |
+---
 
-## Prerequisites
+### 🛠️ Tech Stack
 
-- Node.js 20+
-- A [MongoDB Atlas](https://www.mongodb.com/atlas) cluster (or any MongoDB URI)
-- (Optional) Google OAuth client for “Continue with Google”
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,nextjs,redux,tailwind,bootstrap,sass&theme=dark" alt="Frontend" /><br/>
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,threejs,vercel,git,github,vscode,figma,postman&theme=dark" alt="Backend and tools" />
+</p>
 
-## Setup
+---
 
-```bash
-npm install
-cp .env.example .env.local
-```
+### 🚀 Featured Projects
 
-Edit **`.env.local`** (single env file — do not commit it):
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🌐 <a href="https://github.com/ShivkumarSuthar/portfolio">Portfolio + Study</a></h4>
+      <p>My portfolio plus a study workspace: courses, lesson progress and in-browser code practice.</p>
+      <p><code>Next.js 15</code> <code>TypeScript</code> <code>Auth.js</code> <code>MongoDB</code></p>
+      <a href="https://shivkumarsuthar.vercel.app">🔗 Live</a>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🧊 <a href="https://github.com/ShivkumarSuthar/three-journey">Three Journey</a></h4>
+      <p>Everything I built while learning Three.js: scenes, materials, lights and animation.</p>
+      <p><code>Three.js</code> <code>WebGL</code> <code>JavaScript</code></p>
+      <a href="https://three-journey-five.vercel.app/">🔗 Live</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>🏠 <a href="https://github.com/ShivkumarSuthar/ravalram-interior">Suthar Interior Studio</a></h4>
+      <p>Business website for an interior design studio, live on a custom domain.</p>
+      <p><code>React</code> <code>JavaScript</code></p>
+      <a href="https://sutharinteriorstudio.in">🔗 Live</a>
+    </td>
+    <td width="50%" valign="top">
+      <h4>📊 <a href="https://github.com/ShivkumarSuthar/dashboard-portfolio">Dashboard Portfolio</a></h4>
+      <p>A portfolio designed as an admin-style dashboard.</p>
+      <p><code>React</code> <code>JavaScript</code></p>
+      <a href="https://dashboard-portfolio-black.vercel.app">🔗 Live</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <h4>✅ <a href="https://github.com/ShivkumarSuthar/project_management_tool">Project Management Tool</a></h4>
+      <p>A MERN task manager to create, assign and track work.</p>
+      <p><code>MongoDB</code> <code>Express</code> <code>React</code> <code>Node</code></p>
+    </td>
+    <td width="50%" valign="top">
+      <h4>🌦️ <a href="https://github.com/ShivkumarSuthar/Weather_Detector">Weather Detector</a></h4>
+      <p>Current weather for any city, built with React and Tailwind.</p>
+      <p><code>React</code> <code>Tailwind</code> <code>API</code></p>
+      <a href="https://weather-detector-ten.vercel.app">🔗 Live</a>
+    </td>
+  </tr>
+</table>
 
-```env
-# Required
-AUTH_SECRET=          # openssl rand -base64 32
-AUTH_URL=http://localhost:3000
-MONGODB_URI=mongodb+srv://USER:PASS@cluster0.xxxxx.mongodb.net/shivkumar_study?retryWrites=true&w=majority
+<p align="center"><a href="https://github.com/ShivkumarSuthar?tab=repositories">👉 See all repositories</a></p>
 
-# Optional — site URL / SEO
-APP_URL=http://localhost:3000
-NEXT_PUBLIC_SITE_URL=http://localhost:3000
+---
 
-# Optional — Google SSO
-AUTH_GOOGLE_ID=
-AUTH_GOOGLE_SECRET=
-NEXT_PUBLIC_AUTH_GOOGLE=0   # set to 1 when ID + secret are set
+### 📈 GitHub Stats
 
-# Optional — Facebook SSO
-AUTH_FACEBOOK_ID=
-AUTH_FACEBOOK_SECRET=
-NEXT_PUBLIC_AUTH_FACEBOOK=0
-```
+<p align="center">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=ShivkumarSuthar&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true" alt="GitHub stats" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ShivkumarSuthar&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top languages" />
+</p>
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=ShivkumarSuthar&theme=tokyonight&hide_border=true" alt="GitHub streak" />
+</p>
+<p align="center">
+  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=ShivkumarSuthar&theme=tokyo-night&hide_border=true&area=true" alt="Contribution graph" />
+</p>
 
-### Auth URL (important)
+---
 
-`AUTH_URL` is the **site origin only** — not the Google callback path.
+### 🐍 Contribution Snake
 
-| Environment | `AUTH_URL` |
-|-------------|------------|
-| Local | `http://localhost:3000` (or `:3001` if that port is used) |
-| Vercel | `https://shivkumar-suthar.vercel.app` |
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ShivkumarSuthar/ShivkumarSuthar/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ShivkumarSuthar/ShivkumarSuthar/output/github-snake.svg" />
+    <img alt="Contribution snake" src="https://raw.githubusercontent.com/ShivkumarSuthar/ShivkumarSuthar/output/github-snake.svg" />
+  </picture>
+</p>
 
-Auth.js builds the callback as:  
-`{AUTH_URL}/api/auth/callback/google`
+---
 
-### Google OAuth redirect URIs
+<p align="center"><i>"Code. Learn. Repeat." 🚀 Thanks for stopping by!</i></p>
 
-In [Google Cloud Console](https://console.cloud.google.com/) → Credentials → OAuth client → **Authorized redirect URIs**, add:
-
-```text
-http://localhost:3000/api/auth/callback/google
-https://shivkumar-suthar.vercel.app/api/auth/callback/google
-```
-
-(Match the port you actually use locally.)
-
-## Scripts
-
-```bash
-npm run dev      # development (http://localhost:3000)
-npm run build    # production build (uses .next-build so it won’t wipe a running next dev cache)
-npm run start    # serve the production build
-npm run lint     # ESLint
-```
-
-## Project structure (high level)
-
-```text
-src/
-  app/                 # App Router pages + API routes
-    study/             # Study UI (loading / error / layout)
-    api/auth/          # Auth.js + register
-    api/study/courses/ # Course CRUD
-  auth.ts              # Auth.js config
-  components/          # Portfolio + Study UI
-  lib/mongodb.ts       # Mongoose models + connection
-  data/portfolioData.ts
-```
-
-## Study usage
-
-1. Open `/study`
-2. Register or sign in (email, or Google if configured)
-3. Create a course → add lessons (video / doc / article / practice)
-4. Toggle lesson complete, set plan date, save progress (stored in MongoDB)
-
-## Deploy (Vercel)
-
-1. Push the repo and import the project on Vercel
-2. Set the same env vars in the Vercel project settings (use production `AUTH_URL` / `NEXT_PUBLIC_SITE_URL` with `https://`)
-3. Ensure Atlas Network Access allows Vercel (or `0.0.0.0/0` for serverless)
-4. Deploy
-
-## License
-
-Apache-2.0 (see package / source headers where applicable)
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:2CB67D,100:7F5AF0&height=120&section=footer" alt="footer" />
+</p>
