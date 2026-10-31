@@ -25,7 +25,7 @@
 
 ### 👨‍💻 About Me
 
-Frontend Developer with **3+ years** of experience engineering high-performance, responsive web applications using **React.js, Next.js and TypeScript**. I specialise in component-driven UI architecture, scalable state management and client-side performance optimisation.
+Frontend Developer with **4+ years** of experience engineering high-performance, responsive web applications using **React.js, Next.js and TypeScript**. I specialise in component-driven UI architecture, scalable state management and client-side performance optimisation.
 
 - 🏢 Frontend Engineer at **Dev Technosys Pvt Ltd** (May 2024 – Present)
 - 🎓 Building core modules of the **AIE South Africa university portal** with Next.js, React & TypeScript
